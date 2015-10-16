@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
     <entity name="Bro" syncable="YES">
-        <attribute name="broImage" optional="YES" syncable="YES"/>
-        <attribute name="exp" optional="YES" syncable="YES"/>
-        <attribute name="lastWorkoutComplete" optional="YES" syncable="YES"/>
-        <attribute name="lvl" optional="YES" syncable="YES"/>
+        <attribute name="broImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastWorkoutComplete" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lvl" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Excercise" syncable="YES">
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastWeightUsed" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="reps" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="sets" optional="YES" syncable="YES"/>
+        <attribute name="sets" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="User" syncable="YES">
-        <attribute name="attribute" optional="YES" syncable="YES"/>
-        <attribute name="currentWeight" optional="YES" syncable="YES"/>
+        <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentWeight" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="goalWeight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="progress" optional="YES" syncable="YES"/>
+        <attribute name="progress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startWeight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="WorkoutRoutine" syncable="YES">
-        <attribute name="excer" optional="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="excer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-281" positionY="-0" width="128" height="133"/>
-        <element name="Excercise" positionX="-54" positionY="-135" width="128" height="118"/>
-        <element name="WorkoutRoutine" positionX="-54" positionY="90" width="128" height="73"/>
         <element name="Bro" positionX="-144" positionY="18" width="128" height="105"/>
+        <element name="Excercise" positionX="-54" positionY="-135" width="128" height="120"/>
+        <element name="User" positionX="-281" positionY="-0" width="128" height="135"/>
+        <element name="WorkoutRoutine" positionX="-54" positionY="90" width="128" height="75"/>
     </elements>
 </model>

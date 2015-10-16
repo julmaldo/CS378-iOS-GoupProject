@@ -57,6 +57,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkS-yc-FRz">
+                                <rect key="frame" x="125" y="593" width="124" height="30"/>
+                                <state key="normal" title="temp button timer"/>
+                                <connections>
+                                    <segue destination="NPU-F9-n9x" kind="show" id="omi-Ag-uwb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -66,6 +73,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="672.5" y="744.5"/>
+        </scene>
+        <!--Stop Watch View Controller-->
+        <scene sceneID="Ryl-xg-cPS">
+            <objects>
+                <viewController id="NPU-F9-n9x" customClass="StopWatchViewController" customModule="Workout_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pkw-jc-aW6"/>
+                        <viewControllerLayoutGuide type="bottom" id="8sy-vb-tU6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NWp-GE-lrF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-cA-Uao">
+                                <rect key="frame" x="177" y="357" width="31" height="30"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="NPU-F9-n9x" eventType="touchUpInside" id="tgf-ra-HlR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlQ-iN-USf">
+                                <rect key="frame" x="175" y="395" width="35" height="30"/>
+                                <state key="normal" title="reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="NPU-F9-n9x" eventType="touchUpInside" id="D6i-hE-LRt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hea-of-lTp">
+                                <rect key="frame" x="153" y="215" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8q-w8-YY1">
+                                <rect key="frame" x="176" y="319" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="start:" destination="NPU-F9-n9x" eventType="touchUpInside" id="kfg-WV-OD1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="displayTimeLabel" destination="hea-of-lTp" id="bwc-YG-4lc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7u-Q2-DxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152.5" y="744.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wRA-xh-6Kf">
