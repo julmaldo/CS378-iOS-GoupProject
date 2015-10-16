@@ -6,6 +6,7 @@
         <attribute name="lastWorkoutComplete" optional="YES" syncable="YES"/>
         <attribute name="lvl" optional="YES" syncable="YES"/>
     </entity>
+    <entity name="Entity" syncable="YES"/>
     <entity name="Excercise" syncable="YES">
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastWeightUsed" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -26,9 +27,10 @@
         <attribute name="name" optional="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-281" positionY="-0" width="128" height="133"/>
-        <element name="Excercise" positionX="-54" positionY="-135" width="128" height="118"/>
-        <element name="WorkoutRoutine" positionX="-54" positionY="90" width="128" height="73"/>
         <element name="Bro" positionX="-144" positionY="18" width="128" height="105"/>
+        <element name="Excercise" positionX="-54" positionY="-135" width="128" height="118"/>
+        <element name="User" positionX="-281" positionY="-0" width="128" height="133"/>
+        <element name="WorkoutRoutine" positionX="-54" positionY="90" width="128" height="73"/>
+        <element name="Entity" positionX="-171" positionY="-9" width="128" height="45"/>
     </elements>
 </model>
