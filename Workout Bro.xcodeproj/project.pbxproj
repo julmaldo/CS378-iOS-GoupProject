@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437253B51BD1AA56009E2EDE /* Workout-Bro-.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437253B41BD1AA56009E2EDE /* Workout-Bro-.jpg */; settings = {ASSET_TAGS = (); }; };
 		43AF4E961BCC8FE4003298DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4E951BCC8FE4003298DB /* AppDelegate.swift */; };
 		43AF4E981BCC8FE4003298DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4E971BCC8FE4003298DB /* ViewController.swift */; };
 		43AF4E9B1BCC8FE4003298DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AF4E991BCC8FE4003298DB /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		437253B41BD1AA56009E2EDE /* Workout-Bro-.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Workout-Bro-.jpg"; sourceTree = "<group>"; };
 		43AF4E921BCC8FE4003298DB /* Workout Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout Bro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AF4E951BCC8FE4003298DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43AF4E971BCC8FE4003298DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		437253B61BD1B2A7009E2EDE /* Bro Level Progess jpg */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Bro Level Progess jpg";
+			sourceTree = "<group>";
+		};
 		43AF4E891BCC8FE4003298DB = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +108,11 @@
 		43AF4E941BCC8FE4003298DB /* Workout Bro */ = {
 			isa = PBXGroup;
 			children = (
+				437253B61BD1B2A7009E2EDE /* Bro Level Progess jpg */,
 				43AF4E951BCC8FE4003298DB /* AppDelegate.swift */,
 				43AF4E971BCC8FE4003298DB /* ViewController.swift */,
 				43AF4E991BCC8FE4003298DB /* Main.storyboard */,
+				437253B41BD1AA56009E2EDE /* Workout-Bro-.jpg */,
 				43AF4E9F1BCC8FE4003298DB /* Assets.xcassets */,
 				43AF4EA11BCC8FE4003298DB /* LaunchScreen.storyboard */,
 				43AF4EA41BCC8FE4003298DB /* Info.plist */,
@@ -237,6 +248,7 @@
 				43AF4EA31BCC8FE4003298DB /* LaunchScreen.storyboard in Resources */,
 				43AF4EA01BCC8FE4003298DB /* Assets.xcassets in Resources */,
 				43AF4E9B1BCC8FE4003298DB /* Main.storyboard in Resources */,
+				437253B51BD1AA56009E2EDE /* Workout-Bro-.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +502,7 @@
 				43AF4EBF1BCC8FE4003298DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43AF4EC01BCC8FE4003298DB /* Build configuration list for PBXNativeTarget "Workout BroTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +511,7 @@
 				43AF4EC21BCC8FE4003298DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43AF4EC31BCC8FE4003298DB /* Build configuration list for PBXNativeTarget "Workout BroUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +520,7 @@
 				43AF4EC51BCC8FE4003298DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
