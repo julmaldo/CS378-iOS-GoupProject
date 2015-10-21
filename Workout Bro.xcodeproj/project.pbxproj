@@ -183,7 +183,6 @@
 		43AF4E941BCC8FE4003298DB /* Workout Bro */ = {
 			isa = PBXGroup;
 			children = (
-				437253B61BD1B2A7009E2EDE /* Bro Level Progess jpg */,
 				43AF4E951BCC8FE4003298DB /* AppDelegate.swift */,
 				43AF4E971BCC8FE4003298DB /* ViewController.swift */,
 				43AF4E991BCC8FE4003298DB /* Main.storyboard */,
