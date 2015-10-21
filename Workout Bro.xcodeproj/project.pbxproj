@@ -122,13 +122,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		437253B61BD1B2A7009E2EDE /* Bro Level Progess jpg */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Bro Level Progess jpg";
-			sourceTree = "<group>";
-		};
 		43AF4E891BCC8FE4003298DB = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +145,6 @@
 		43AF4E941BCC8FE4003298DB /* Workout Bro */ = {
 			isa = PBXGroup;
 			children = (
-				437253B61BD1B2A7009E2EDE /* Bro Level Progess jpg */,
 				43AF4E951BCC8FE4003298DB /* AppDelegate.swift */,
 				43AF4E971BCC8FE4003298DB /* ViewController.swift */,
 				43AF4E991BCC8FE4003298DB /* Main.storyboard */,
