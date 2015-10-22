@@ -13,6 +13,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var workoutButton: UIButton!
     @IBOutlet weak var calendarButton: UIButton!
+    @IBOutlet weak var myImageView: UIImageView!
+    
+    var imageList = [UIImage]()
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +31,18 @@ class ViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
         }
         
-       }
-
+        for i in 1...4{
+            let imageName = "Avatar\(i)"
+            imageList.append(UIImage(named: imageName)!)
+        }
+        startAnimation()
+    
+    }
+    
+    func startAnimation(){
+        myImageView.animationImages = imageList
+        myImageView.animationDuration = 2
+        myImageView.startAnimating()
+    }
     
 }
