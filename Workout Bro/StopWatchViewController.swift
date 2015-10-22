@@ -10,7 +10,6 @@ import UIKit
 
 class StopWatchViewController: UIViewController {
 
-    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var displayTimeLabel: UILabel!
     
     var startTime = NSTimeInterval()
@@ -31,10 +30,11 @@ class StopWatchViewController: UIViewController {
         }
     }
     
-    @IBAction func reset(sender: AnyObject) {
-        displayTimeLabel.text = "00:00:00"
-        timer.invalidate()
-    }
+//    @IBAction func reset(sender: AnyObject) {
+//        timer.invalidate()
+//        displayTimeLabel.text = "00:00:00"
+//    }
+    
     @IBAction func stop(sender: AnyObject) {
         timer.invalidate()
     }
