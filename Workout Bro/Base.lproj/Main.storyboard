@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xKM-M6-gJE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xKM-M6-gJE">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,7 +19,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zvb-hl-xtY">
                                 <rect key="frame" x="0.0" y="64" width="375" height="281"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar1.png" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-kY-Yv3">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-kY-Yv3">
                                         <rect key="frame" x="101" y="59" width="172" height="164"/>
                                         <animations/>
                                     </imageView>
@@ -193,6 +193,6 @@
     </scenes>
     <resources>
         <image name="08.jpg" width="1238" height="62"/>
-        <image name="Avatar1.png" width="27" height="45"/>
+        <image name="Avatar1.jpg" width="27" height="45"/>
     </resources>
 </document>

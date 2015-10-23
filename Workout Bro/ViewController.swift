@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         }
         
         for i in 1...4{
-            let imageName = "Avatar\(i)"
+            let imageName = "Avatar\(i).jpg"
             imageList.append(UIImage(named: imageName)!)
         }
         startAnimation()
