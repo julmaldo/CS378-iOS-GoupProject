@@ -108,7 +108,6 @@
 		43AF4EBA1BCC8FE4003298DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A5728E51BD723CD001B3543 /* startPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = startPush.swift; sourceTree = "<group>"; };
 		4AD3CE621BD0608F008B21A2 /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
-		4AEC231A1BD991D6002A85BA /* stopPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stopPush.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +194,6 @@
 				43AF4E991BCC8FE4003298DB /* Main.storyboard */,
 				4392E7BB1BD71BF100AE5D86 /* loadingBar 2 */,
 				437253B41BD1AA56009E2EDE /* Workout-Bro-.jpg */,
-				4AEC231A1BD991D6002A85BA /* stopPush.swift */,
 				43AF4E9F1BCC8FE4003298DB /* Assets.xcassets */,
 				15DEF25B1BD99C670031515C /* WorkoutTableViewController.swift */,
 				4AD3CE621BD0608F008B21A2 /* StopWatchViewController.swift */,
