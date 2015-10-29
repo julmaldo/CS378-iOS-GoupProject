@@ -43,8 +43,8 @@
 		43AF4EA31BCC8FE4003298DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AF4EA11BCC8FE4003298DB /* LaunchScreen.storyboard */; };
 		43AF4EAE1BCC8FE4003298DB /* Workout_BroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4EAD1BCC8FE4003298DB /* Workout_BroTests.swift */; };
 		43AF4EB91BCC8FE4003298DB /* Workout_BroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4EB81BCC8FE4003298DB /* Workout_BroUITests.swift */; };
-		4A6FD75E1BE2D32300255101 /* startButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FD75C1BE2D32300255101 /* startButton.jpg */; };
-		4A6FD75F1BE2D32300255101 /* stopButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FD75D1BE2D32300255101 /* stopButton.jpg */; };
+		4A6FD7621BE2D59D00255101 /* startButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FD7611BE2D59D00255101 /* startButton.jpg */; };
+		4A6FD7641BE2D5B900255101 /* stopButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A6FD7631BE2D5B900255101 /* stopButton.jpg */; };
 		4AD3CE631BD0608F008B21A2 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3CE621BD0608F008B21A2 /* StopWatchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,8 +108,8 @@
 		43AF4EB41BCC8FE4003298DB /* Workout BroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Workout BroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AF4EB81BCC8FE4003298DB /* Workout_BroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout_BroUITests.swift; sourceTree = "<group>"; };
 		43AF4EBA1BCC8FE4003298DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A6FD75C1BE2D32300255101 /* startButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startButton.jpg; sourceTree = "<group>"; };
-		4A6FD75D1BE2D32300255101 /* stopButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stopButton.jpg; sourceTree = "<group>"; };
+		4A6FD7611BE2D59D00255101 /* startButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = startButton.jpg; path = ../../../Desktop/buttons/startButton.jpg; sourceTree = "<group>"; };
+		4A6FD7631BE2D5B900255101 /* stopButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = stopButton.jpg; path = ../../../Desktop/buttons/stopButton.jpg; sourceTree = "<group>"; };
 		4AD3CE621BD0608F008B21A2 /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,7 +190,7 @@
 		43AF4E941BCC8FE4003298DB /* Workout Bro */ = {
 			isa = PBXGroup;
 			children = (
-				4A6FD75B1BE2D32300255101 /* buttons */,
+				4A6FD7601BE2D57500255101 /* buttons */,
 				4AEC232A1BDAF794002A85BA /* avatar */,
 				43AF4E951BCC8FE4003298DB /* AppDelegate.swift */,
 				15DEF25F1BD99D020031515C /* DataModel.swift */,
@@ -226,14 +226,13 @@
 			path = "Workout BroUITests";
 			sourceTree = "<group>";
 		};
-		4A6FD75B1BE2D32300255101 /* buttons */ = {
+		4A6FD7601BE2D57500255101 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
-				4A6FD75C1BE2D32300255101 /* startButton.jpg */,
-				4A6FD75D1BE2D32300255101 /* stopButton.jpg */,
+				4A6FD7631BE2D5B900255101 /* stopButton.jpg */,
+				4A6FD7611BE2D59D00255101 /* startButton.jpg */,
 			);
 			name = buttons;
-			path = ../../../Desktop/buttons;
 			sourceTree = "<group>";
 		};
 		4AEC232A1BDAF794002A85BA /* avatar */ = {
@@ -370,11 +369,11 @@
 				43AF4EA01BCC8FE4003298DB /* Assets.xcassets in Resources */,
 				435F4DD51BDAF70700EE61CE /* Avatar1.jpg in Resources */,
 				4392E7DA1BD71BF100AE5D86 /* 10.jpg in Resources */,
-				4A6FD75F1BE2D32300255101 /* stopButton.jpg in Resources */,
+				4A6FD7641BE2D5B900255101 /* stopButton.jpg in Resources */,
 				4392E7E21BD71BF100AE5D86 /* 18.jpg in Resources */,
 				435F4DD81BDAF70700EE61CE /* Avatar4.jpg in Resources */,
 				4392E7D61BD71BF100AE5D86 /* 06.jpg in Resources */,
-				4A6FD75E1BE2D32300255101 /* startButton.jpg in Resources */,
+				4A6FD7621BE2D59D00255101 /* startButton.jpg in Resources */,
 				435F4DD71BDAF70700EE61CE /* Avatar3.jpg in Resources */,
 				4392E7D51BD71BF100AE5D86 /* 05.jpg in Resources */,
 				43AF4E9B1BCC8FE4003298DB /* Main.storyboard in Resources */,
