@@ -43,8 +43,8 @@
 		43AF4EA31BCC8FE4003298DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AF4EA11BCC8FE4003298DB /* LaunchScreen.storyboard */; };
 		43AF4EAE1BCC8FE4003298DB /* Workout_BroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4EAD1BCC8FE4003298DB /* Workout_BroTests.swift */; };
 		43AF4EB91BCC8FE4003298DB /* Workout_BroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4EB81BCC8FE4003298DB /* Workout_BroUITests.swift */; };
-		43E40DC31BE2D73200B386A2 /* redButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43E40DC21BE2D73200B386A2 /* redButton.jpg */; settings = {ASSET_TAGS = (); }; };
-		43E40DC51BE2D74000B386A2 /* greenButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43E40DC41BE2D74000B386A2 /* greenButton.jpg */; settings = {ASSET_TAGS = (); }; };
+		43E40DC31BE2D73200B386A2 /* redButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43E40DC21BE2D73200B386A2 /* redButton.jpg */; };
+		43E40DC51BE2D74000B386A2 /* greenButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43E40DC41BE2D74000B386A2 /* greenButton.jpg */; };
 		4AD3CE631BD0608F008B21A2 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3CE621BD0608F008B21A2 /* StopWatchViewController.swift */; };
 /* End PBXBuildFile section */
 
