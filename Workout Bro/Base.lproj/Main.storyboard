@@ -133,10 +133,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8q-w8-YY1" customClass="startPush" customModule="Workout_Bro" customModuleProvider="target">
-                                <rect key="frame" x="87" y="260" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8q-w8-YY1">
+                                <rect key="frame" x="67" y="260" width="100" height="100"/>
                                 <animations/>
-                                <state key="normal" title="start"/>
+                                <state key="normal" title="start" backgroundImage="startButton.jpg"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                         <color key="value" red="0.22352941176470589" green="0.62745098039215685" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
@@ -147,10 +147,12 @@
                                     <action selector="start:" destination="NPU-F9-n9x" eventType="touchUpInside" id="kfg-WV-OD1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-cA-Uao" customClass="startPush">
-                                <rect key="frame" x="195" y="260" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-cA-Uao">
+                                <rect key="frame" x="203" y="260" width="100" height="100"/>
                                 <animations/>
-                                <state key="normal" title="stop"/>
+                                <state key="normal" title="stop" backgroundImage="stopButton.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                         <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,7 +165,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.97647058823529409" green="1" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="1" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -198,5 +200,7 @@
     <resources>
         <image name="08.jpg" width="1238" height="62"/>
         <image name="Avatar1.jpg" width="27" height="45"/>
+        <image name="startButton.jpg" width="300" height="300"/>
+        <image name="stopButton.jpg" width="300" height="300"/>
     </resources>
 </document>
