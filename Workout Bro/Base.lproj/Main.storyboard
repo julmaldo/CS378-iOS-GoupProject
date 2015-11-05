@@ -4,6 +4,117 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
+        <!--Set counter-->
+        <scene sceneID="oKR-IW-pxG">
+            <objects>
+                <viewController id="zWr-HV-dVx" customClass="set_counter" customModule="Workout_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mpA-x9-78W"/>
+                        <viewControllerLayoutGuide type="bottom" id="xt8-wb-fGG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eXg-eW-na3" customClass="Set_counter">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1J-5v-ygm">
+                                <rect key="frame" x="134" y="466" width="106" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Finished Set">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishedSetPushed:" destination="zWr-HV-dVx" eventType="touchUpInside" id="7wg-Af-TLM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoh-Uu-3PN">
+                                <rect key="frame" x="134" y="520" width="106" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Redo Set">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redoSetPushed:" destination="zWr-HV-dVx" eventType="touchUpInside" id="wQ2-sz-cE1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oow-n4-qXP">
+                                <rect key="frame" x="134" y="575" width="106" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOverPushed:" destination="zWr-HV-dVx" eventType="touchUpInside" id="JvG-FU-Kjf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completed Set Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqd-1X-gTM">
+                                <rect key="frame" x="97" y="127" width="180" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-GK-ThW" customClass="CounterView" customModule="Workout_Bro" customModuleProvider="target">
+                                <rect key="frame" x="62" y="172" width="250" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K97-hZ-tGb">
+                                        <rect key="frame" x="114" y="114" width="22" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="out of " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKM-eI-dk8">
+                                        <rect key="frame" x="100" y="154" width="50" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;total&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXX-9T-vTC">
+                                        <rect key="frame" x="97" y="195" width="56" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.9789520035" green="1" blue="0.84817851860000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
+                                        <color key="value" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                        <color key="value" red="1" green="0.4268444321" blue="0.13518780929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWA-Tt-eJT">
+                                <rect key="frame" x="300" y="617" width="47" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="exitPushed:" destination="zWr-HV-dVx" eventType="touchUpInside" id="1PO-PD-bbF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.9789520035" green="1" blue="0.84817851860000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="K97-hZ-tGb" id="HT3-JW-nka"/>
+                        <outlet property="counterTotalLabel" destination="bXX-9T-vTC" id="LUJ-wD-1mz"/>
+                        <outlet property="counterView" destination="bp2-GK-ThW" id="UbE-my-qkP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Aj-sF-E4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720.5" y="-53.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -25,7 +136,7 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.26666666666666666" green="0.68235294117647061" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.68627450980392157" green="0.2627450980392157" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2j-XM-c8N">
                                 <rect key="frame" x="0.0" y="346" width="377" height="321"/>
@@ -37,7 +148,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKb-7e-bZQ">
                                         <rect key="frame" x="228" y="183" width="80" height="40"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.26666666666666666" green="0.68235294117647061" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Workout">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,12 +167,20 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-FA-J08">
                                         <rect key="frame" x="68" y="183" width="80" height="40"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Calendar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5a8-gi-ePC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvV-mf-PZy">
+                                        <rect key="frame" x="111" y="276" width="144" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Temp counter button"/>
+                                        <connections>
+                                            <segue destination="zWr-HV-dVx" kind="presentation" id="VR1-57-knL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -165,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7u-Q2-DxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152.5" y="744.5"/>
+            <point key="canvasLocation" x="1238.5" y="744.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="rE5-EL-UZ5">
