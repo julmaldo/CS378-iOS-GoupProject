@@ -45,6 +45,8 @@
 		43AF4EB91BCC8FE4003298DB /* Workout_BroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4EB81BCC8FE4003298DB /* Workout_BroUITests.swift */; };
 		43E40DC31BE2D73200B386A2 /* redButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43E40DC21BE2D73200B386A2 /* redButton.jpg */; };
 		43E40DC51BE2D74000B386A2 /* greenButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43E40DC41BE2D74000B386A2 /* greenButton.jpg */; };
+		43E8D4901BEBEA2500684DDA /* set counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E8D48F1BEBEA2500684DDA /* set counter.swift */; };
+		43E8D4921BEBEB0500684DDA /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E8D4911BEBEB0500684DDA /* CounterView.swift */; };
 		4AD3CE631BD0608F008B21A2 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD3CE621BD0608F008B21A2 /* StopWatchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +112,8 @@
 		43AF4EBA1BCC8FE4003298DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43E40DC21BE2D73200B386A2 /* redButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = redButton.jpg; path = ../redButton.jpg; sourceTree = "<group>"; };
 		43E40DC41BE2D74000B386A2 /* greenButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = greenButton.jpg; path = ../greenButton.jpg; sourceTree = "<group>"; };
+		43E8D48F1BEBEA2500684DDA /* set counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "set counter.swift"; path = "../set counter.swift"; sourceTree = "<group>"; };
+		43E8D4911BEBEB0500684DDA /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		4AD3CE621BD0608F008B21A2 /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +199,8 @@
 				43AF4E951BCC8FE4003298DB /* AppDelegate.swift */,
 				15DEF25F1BD99D020031515C /* DataModel.swift */,
 				43AF4E971BCC8FE4003298DB /* ViewController.swift */,
+				43E8D48F1BEBEA2500684DDA /* set counter.swift */,
+				43E8D4911BEBEB0500684DDA /* CounterView.swift */,
 				43AF4E991BCC8FE4003298DB /* Main.storyboard */,
 				4392E7BB1BD71BF100AE5D86 /* loadingBar 2 */,
 				437253B41BD1AA56009E2EDE /* Workout-Bro-.jpg */,
@@ -411,8 +417,10 @@
 				4AD3CE631BD0608F008B21A2 /* StopWatchViewController.swift in Sources */,
 				43AF4E981BCC8FE4003298DB /* ViewController.swift in Sources */,
 				43AF4E961BCC8FE4003298DB /* AppDelegate.swift in Sources */,
+				43E8D4901BEBEA2500684DDA /* set counter.swift in Sources */,
 				43AF4E9E1BCC8FE4003298DB /* Workout_Bro.xcdatamodeld in Sources */,
 				15DEF2601BD99D020031515C /* DataModel.swift in Sources */,
+				43E8D4921BEBEB0500684DDA /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

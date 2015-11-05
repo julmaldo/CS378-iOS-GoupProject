@@ -36,6 +36,22 @@ class ViewController: UIViewController {
             imageList.append(UIImage(named: imageName)!)
         }
         startAnimation()
+        
+        //START- notification code
+        let notification:UILocalNotification = UILocalNotification()
+        
+        //EM: hardcoded date until calendar is fixed
+        // var workDate = blah
+        //EM: catergories need to be fixed
+        // notification.category = "FIRST_CATERGORY"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.alertBody = "Have you worked out today?"
+        notification.timeZone = NSTimeZone.localTimeZone()
+        notification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        notification.repeatInterval = NSCalendarUnit.Day
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        //END
     
     }
     

@@ -16,7 +16,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //skip action is destructive and will not open app
+        let skipAction:UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        skipAction.identifier = "SKIP_ACTION"
+        skipAction.title = "Skip Action"
+        
+        skipAction.activationMode = UIUserNotificationActivationMode.Background
+        skipAction.destructive = true
+        skipAction.authenticationRequired = false
+        
+        //go action is not destructive and will open app
+        let goAction:UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        goAction.identifier = "GO_ACTION"
+        goAction.title = "Go Action"
+        
+        goAction.activationMode = UIUserNotificationActivationMode.Foreground
+        goAction.destructive = false
+        goAction.authenticationRequired = false
+        
+        //third action - undecided
+        let thirdAction:UIMutableUserNotificationAction = UIMutableUserNotificationAction()
+        thirdAction.identifier = "THIRD_ACTION"
+        thirdAction.title = "Third Action"
+        
+        thirdAction.activationMode = UIUserNotificationActivationMode.Foreground
+        thirdAction.destructive = false
+        thirdAction.authenticationRequired = false
+        
+        //catergories
+        let firstCatergory:UIMutableUserNotificationCategory = UIMutableUserNotificationCategory()
+        firstCatergory.identifier = "FIRST_CATERGORY"
+        
+        let defaultActions:NSArray = [skipAction, goAction, thirdAction]
+        let minimalActions:NSArray = [skipAction, goAction]
+        
+        //EM: catergories not working...
+        firstCatergory.setActions(defaultActions as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Default)
+        firstCatergory.setActions(minimalActions as? [UIUserNotificationAction], forContext: UIUserNotificationActionContext.Minimal)
+        
+        //let catergories:NSSet = NSSet(object: firstCatergory)
+        
+        //EM: setting catergories back to nil
+        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        
         return true
     }
 
