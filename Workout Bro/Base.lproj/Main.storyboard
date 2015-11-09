@@ -164,6 +164,14 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvV-mf-PZy">
+                                        <rect key="frame" x="111" y="276" width="144" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Temp counter button"/>
+                                        <connections>
+                                            <segue destination="zWr-HV-dVx" kind="presentation" id="VR1-57-knL"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-FA-J08">
                                         <rect key="frame" x="68" y="183" width="80" height="40"/>
                                         <animations/>
@@ -173,14 +181,6 @@
                                         </state>
                                         <connections>
                                             <action selector="buttonCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5a8-gi-ePC"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvV-mf-PZy">
-                                        <rect key="frame" x="111" y="276" width="144" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Temp counter button"/>
-                                        <connections>
-                                            <segue destination="zWr-HV-dVx" kind="presentation" id="VR1-57-knL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -248,29 +248,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hea-of-lTp">
-                                <rect key="frame" x="93" y="171" width="189" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count Down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hea-of-lTp">
+                                <rect key="frame" x="91" y="171" width="193" height="65"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8q-w8-YY1">
-                                <rect key="frame" x="67" y="260" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8q-w8-YY1">
+                                <rect key="frame" x="91" y="501" width="80" height="40"/>
                                 <animations/>
-                                <state key="normal" title="start" backgroundImage="greenButton.jpg"/>
+                                <color key="backgroundColor" red="0.61568627450980395" green="0.18823529411764706" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="start:" destination="NPU-F9-n9x" eventType="touchUpInside" id="kfg-WV-OD1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-cA-Uao">
-                                <rect key="frame" x="203" y="260" width="100" height="100"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOk-BA-ZyF">
+                                <rect key="frame" x="0.0" y="251" width="375" height="216"/>
                                 <animations/>
-                                <state key="normal" title="stop" backgroundImage="redButton.jpg">
+                                <connections>
+                                    <outlet property="dataSource" destination="NPU-F9-n9x" id="C93-QL-dbR"/>
+                                    <outlet property="delegate" destination="NPU-F9-n9x" id="1qy-DM-wH3"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-cA-Uao">
+                                <rect key="frame" x="204" y="501" width="80" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.61568627450980395" green="0.18823529411764706" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="stop">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="stop:" destination="NPU-F9-n9x" eventType="touchUpInside" id="tgf-ra-HlR"/>
+                                    <action selector="stop:" destination="NPU-F9-n9x" eventType="touchUpInside" id="gzi-NA-zJu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -280,6 +292,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="displayTimeLabel" destination="hea-of-lTp" id="bwc-YG-4lc"/>
+                        <outlet property="userTime" destination="NOk-BA-ZyF" id="cPF-z7-EY0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7u-Q2-DxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,7 +355,5 @@
     <resources>
         <image name="08.jpg" width="1238" height="62"/>
         <image name="Avatar1.jpg" width="27" height="45"/>
-        <image name="greenButton.jpg" width="300" height="300"/>
-        <image name="redButton.jpg" width="300" height="300"/>
     </resources>
 </document>
