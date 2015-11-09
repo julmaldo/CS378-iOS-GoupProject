@@ -8,70 +8,72 @@
 
 import UIKit
 
-class StopWatchViewController: UIViewController {
+class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var displayTimeLabel: UILabel!
+    @IBOutlet weak var userTime: UIPickerView!
     
-    var startTime = NSTimeInterval()
+    var arrPicks:[Int] = []
     
-    var timer:NSTimer = NSTimer()
+    var timeRemain = 0
+    var timer:NSTimer? = nil
+    var isRun = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func start(sender: AnyObject) {
-        if (!timer.valid) {
-            let aSelector : Selector = "updateTime"
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-            startTime = NSDate.timeIntervalSinceReferenceDate()
+        for i in 1...99{
+            arrPicks.append(i)
         }
     }
     
-//    @IBAction func reset(sender: AnyObject) {
-//        timer.invalidate()
-//        displayTimeLabel.text = "00:00:00"
-//    }
+    @IBAction func start(sender: AnyObject) {
+        if(isRun == false){
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
+            isRun = true
+        }
+    }
     
     @IBAction func stop(sender: AnyObject) {
-        timer.invalidate()
+        if(isRun == true){
+            timer!.invalidate()
+            isRun = false
+        }
     }
     
     func updateTime() {
-        let currentTime = NSDate.timeIntervalSinceReferenceDate()
-        
-        //Find the difference between current time and start time.
-        var elapsedTime: NSTimeInterval = currentTime - startTime
-        
-        //calculate the minutes in elapsed time.
-        let minutes = UInt8(elapsedTime / 60.0)
-        elapsedTime -= (NSTimeInterval(minutes) * 60)
-        
-        //calculate the seconds in elapsed time.
-        let seconds = UInt8(elapsedTime)
-        elapsedTime -= NSTimeInterval(seconds)
-        
-        //find out the fraction of milliseconds to be displayed.
-        let fraction = UInt8(elapsedTime * 100)
-        
-        //add the leading zero for minutes, seconds and millseconds and store them as string constants
-        
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        let strFraction = String(format: "%02d", fraction)
-        
-        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
-        displayTimeLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+        --timeRemain
+        if(timeRemain > 0){
+            displayTimeLabel.text = String(timeRemain)
+        }
+        else{
+            displayTimeLabel.text = "Done."
+            timer!.invalidate()
+            timer = nil
+            isRun = false
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrPicks.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if(isRun == false){
+            timeRemain = arrPicks[row]
+            displayTimeLabel.text = String(arrPicks[row])
+        }
+        return "\(arrPicks[row])"
+    }
+    
     /*
     // MARK: - Navigation
 
