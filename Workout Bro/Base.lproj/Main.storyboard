@@ -19,7 +19,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1J-5v-ygm">
                                 <rect key="frame" x="134" y="466" width="106" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Finished Set">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,7 +30,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoh-Uu-3PN">
                                 <rect key="frame" x="134" y="520" width="106" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Redo Set">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,7 +41,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oow-n4-qXP">
                                 <rect key="frame" x="134" y="575" width="106" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Start Over">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -82,13 +82,13 @@
                                     </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.9789520035" green="1" blue="0.84817851860000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90624508770000001" green="0.90001506819999999" blue="0.7756392111" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
-                                        <color key="value" red="0.2666666667" green="0.68235294120000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
-                                        <color key="value" red="1" green="0.4268444321" blue="0.13518780929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -102,7 +102,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.9789520035" green="1" blue="0.84817851860000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90624508773437651" green="0.90001506816609922" blue="0.77563921105657352" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -158,7 +158,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMo-UK-2Jj">
-                                        <rect key="frame" x="147" y="117" width="82" height="21"/>
+                                        <rect key="frame" x="147" y="150" width="82" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,9 +183,45 @@
                                             <segue destination="zWr-HV-dVx" kind="presentation" id="VR1-57-knL"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k22-j4-hGa">
+                                        <rect key="frame" x="303" y="276" width="57" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Settings"/>
+                                        <connections>
+                                            <segue destination="fE6-lm-VTO" kind="presentation" id="Rgd-Ou-uwP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-Ai-rl2">
+                                        <rect key="frame" x="220" y="97" width="40" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB8-ao-dOp">
+                                        <rect key="frame" x="68" y="97" width="63" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jV-Fl-fyY">
+                                        <rect key="frame" x="139" y="97" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8m7-d9-ds5">
+                                        <rect key="frame" x="266" y="97" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.9789520034686896" green="1" blue="0.84817851858924875" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90624508770000001" green="0.90001506819999999" blue="0.7756392111" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BroName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkr-aa-cWv">
                                 <rect key="frame" x="151" y="96" width="72" height="21"/>
@@ -200,13 +236,6 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25E-iI-h9y">
                                 <rect key="frame" x="53" y="306" width="40" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBe-LD-xZb">
-                                <rect key="frame" x="82" y="462" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -285,6 +314,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z7u-Q2-DxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1238.5" y="744.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="haj-qx-eIS">
+            <objects>
+                <viewController id="fE6-lm-VTO" customClass="SettingsViewController" customModule="Workout_Bro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Rh-U5-J2b"/>
+                        <viewControllerLayoutGuide type="bottom" id="hV2-gS-GDn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V8h-3E-lJG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyE-GW-WTQ">
+                                <rect key="frame" x="169" y="354" width="37" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="DonePushed:" destination="fE6-lm-VTO" eventType="touchUpInside" id="Twu-kE-pzt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Starting Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-CQ-qK9">
+                                <rect key="frame" x="52" y="150" width="124" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKB-rD-h0u">
+                                <rect key="frame" x="55" y="222" width="121" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkq-zm-2L7">
+                                <rect key="frame" x="78" y="288" width="98" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK6-ky-6ks">
+                                <rect key="frame" x="281" y="146" width="42" height="30"/>
+                                <animations/>
+                                <state key="normal" title="adjust"/>
+                                <connections>
+                                    <action selector="startingAdjustPushed:" destination="fE6-lm-VTO" eventType="touchUpInside" id="ND5-8N-fD7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmW-Go-b2D">
+                                <rect key="frame" x="281" y="284" width="42" height="30"/>
+                                <animations/>
+                                <state key="normal" title="adjust"/>
+                                <connections>
+                                    <action selector="goalAdjustPushed:" destination="fE6-lm-VTO" eventType="touchUpInside" id="t76-T8-Vgh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;weight&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3s-z1-oq7">
+                                <rect key="frame" x="182" y="150" width="73" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3c-Wb-Uid">
+                                <rect key="frame" x="224" y="222" width="0.0" height="0.0"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;weight&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItB-7I-9VU">
+                                <rect key="frame" x="182" y="222" width="73" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;weight&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL9-gQ-H6A">
+                                <rect key="frame" x="182" y="288" width="73" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk6-5t-JL5">
+                                <rect key="frame" x="281" y="218" width="42" height="30"/>
+                                <animations/>
+                                <state key="normal" title="adjust"/>
+                                <connections>
+                                    <action selector="currentAdjustPushed:" destination="fE6-lm-VTO" eventType="touchUpInside" id="Xtx-P3-Y8n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.90624508770000001" green="0.90001506819999999" blue="0.7756392111" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bh5-9R-w55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="498.5" y="1588.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="rE5-EL-UZ5">
