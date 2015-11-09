@@ -21,7 +21,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for i in 1...100{
+        for i in 1...99{
             arrPicks.append(i)
         }
     }
@@ -52,14 +52,6 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             isRun = false
         }
     }
-
-//    @IBAction func addTime(sender: AnyObject) {
-//        timeRemain += 5
-//        if(isRun == false){
-//            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
-//            isRun = true
-//        }
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -75,8 +67,10 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        timeRemain = arrPicks[row]
-        displayTimeLabel.text = String(arrPicks[row])
+        if(isRun == false){
+            timeRemain = arrPicks[row]
+            displayTimeLabel.text = String(arrPicks[row])
+        }
         return "\(arrPicks[row])"
     }
     
