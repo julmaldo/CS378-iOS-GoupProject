@@ -183,6 +183,14 @@
                                             <action selector="buttonCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5a8-gi-ePC"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBE-DJ-Zn4">
+                                        <rect key="frame" x="269" y="250" width="71" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="temp alert"/>
+                                        <connections>
+                                            <action selector="userUpdateWeight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fs9-I3-JHu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.9789520034686896" green="1" blue="0.84817851858924875" alpha="1" colorSpace="calibratedRGB"/>
