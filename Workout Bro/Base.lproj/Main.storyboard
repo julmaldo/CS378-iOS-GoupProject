@@ -307,15 +307,6 @@
                                     <outlet property="delegate" destination="NPU-F9-n9x" id="1qy-DM-wH3"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79Z-wD-Ly6">
-                                <rect key="frame" x="308" y="624" width="47" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Exit"/>
-                                <connections>
-                                    <action selector="exitPushed:" destination="zWr-HV-dVx" eventType="touchUpInside" id="krS-0M-7t8"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="lyT-JK-Tyg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.97647058823529409" green="1" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,7 +332,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JyV-zM-GTA">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JyV-zM-GTA" id="iBR-pz-8HR">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -387,7 +378,4 @@
         <image name="08.jpg" width="1238" height="62"/>
         <image name="Avatar1.jpg" width="27" height="45"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="lyT-JK-Tyg"/>
-    </inferredMetricsTieBreakers>
 </document>
