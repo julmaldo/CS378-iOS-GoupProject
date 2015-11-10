@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SettingsViewController: UIViewController {
 
@@ -20,77 +21,47 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    var user = [NSManagedObject]()
+    @IBOutlet weak var startingWeightTF: UITextField!
+    @IBOutlet weak var currentWeightTF: UITextField!
+    @IBOutlet weak var goalWeightTF: UITextField!
+    var canidates = [NSManagedObject]()
     
-    var alertController:UIAlertController? = nil
-    var loginTextField: UITextField? = nil
-    
-    @IBAction func goalAdjustPushed(sender: AnyObject) {
-        self.alertController = UIAlertController(title: "Alert Controller", message: "Alert Controller With Text Field", preferredStyle: UIAlertControllerStyle.Alert)
+  
+    func saveUser(currentWeight: String, goalWeight: String, startingWeight:String) {
         
-        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            print("Ok Button Pressed 2")
-        })
-        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
-            print("Cancel Button Pressed 2")
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        // Create the entity we want to save
+        let entity =  NSEntityDescription.entityForName("User", inManagedObjectContext: managedContext)
+        
+        let canidate = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+        
+        // Set the attribute values
+        canidate.setValue(currentWeight, forKey: "currentWeight")
+        canidate.setValue(goalWeight, forKey: "goalWeight")
+        canidate.setValue(startingWeight, forKey: "startWeight")
+        
+        
+        // Commit the changes.
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
         }
         
-        self.alertController!.addAction(ok)
-        self.alertController!.addAction(cancel)
-        
-        self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            // Enter the textfield customization code here.
-            self.loginTextField = textField
-            self.loginTextField?.placeholder = "Enter Weight"
-        }
-        
-        presentViewController(self.alertController!, animated: true, completion: nil)
     }
-    @IBAction func currentAdjustPushed(sender: AnyObject) {
-        self.alertController = UIAlertController(title: "Alert Controller", message: "Alert Controller With Text Field", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            print("Ok Button Pressed 2")
-        })
-        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
-            print("Cancel Button Pressed 2")
-        }
-        
-        self.alertController!.addAction(ok)
-        self.alertController!.addAction(cancel)
-        
-        self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            // Enter the textfield customization code here.
-            self.loginTextField = textField
-            self.loginTextField?.placeholder = "Enter Weight"
-        }
-        
-        presentViewController(self.alertController!, animated: true, completion: nil)
-    }
-    @IBAction func startingAdjustPushed(sender: AnyObject) {
-        self.alertController = UIAlertController(title: "Alert Controller", message: "Alert Controller With Text Field", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            print("Ok Button Pressed 2")
-        })
-        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
-            print("Cancel Button Pressed 2")
-        }
-        
-        self.alertController!.addAction(ok)
-        self.alertController!.addAction(cancel)
-        
-        self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            // Enter the textfield customization code here.
-            self.loginTextField = textField
-            self.loginTextField?.placeholder = "Enter Weight"
-        }
-        
-        presentViewController(self.alertController!, animated: true, completion: nil)
-    }
-   
 
-
+    @IBAction func Exit(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBAction func DonePushed(sender: AnyObject) {
+        saveUser(currentWeightTF.text!, goalWeight: goalWeightTF.text!, startingWeight: startingWeightTF.text!)
         dismissViewControllerAnimated(true, completion: nil)
     }
     /*
