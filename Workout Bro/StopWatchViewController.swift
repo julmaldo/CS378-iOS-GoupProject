@@ -21,8 +21,8 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for i in 1...99{
-            arrPicks.append(i)
+        for i in 1...40{
+            arrPicks.append(i*5)
         }
     }
     
