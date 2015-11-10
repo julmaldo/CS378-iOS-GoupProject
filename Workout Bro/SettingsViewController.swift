@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var startingWeightTF: UITextField!
     @IBOutlet weak var currentWeightTF: UITextField!
     @IBOutlet weak var goalWeightTF: UITextField!
-    var canidates = [NSManagedObject]()
+    
     
   
     func saveUser(currentWeight: String, goalWeight: String, startingWeight:String) {
@@ -37,12 +37,12 @@ class SettingsViewController: UIViewController {
         // Create the entity we want to save
         let entity =  NSEntityDescription.entityForName("User", inManagedObjectContext: managedContext)
         
-        let canidate = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+        let user = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
         
         // Set the attribute values
-        canidate.setValue(currentWeight, forKey: "currentWeight")
-        canidate.setValue(goalWeight, forKey: "goalWeight")
-        canidate.setValue(startingWeight, forKey: "startWeight")
+        user.setValue(currentWeight, forKey: "currentWeight")
+        user.setValue(goalWeight, forKey: "goalWeight")
+        user.setValue(startingWeight, forKey: "startWeight")
         
         
         // Commit the changes.
