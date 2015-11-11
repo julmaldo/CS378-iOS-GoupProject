@@ -13,7 +13,6 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -21,12 +20,11 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     var user = [NSManagedObject]()
     @IBOutlet weak var startingWeightTF: UITextField!
     @IBOutlet weak var currentWeightTF: UITextField!
     @IBOutlet weak var goalWeightTF: UITextField!
-    
-    
   
     func saveUser(currentWeight: String, goalWeight: String, startingWeight:String) {
         
@@ -43,7 +41,6 @@ class SettingsViewController: UIViewController {
         user.setValue(currentWeight, forKey: "currentWeight")
         user.setValue(goalWeight, forKey: "goalWeight")
         user.setValue(startingWeight, forKey: "startWeight")
-        
         
         // Commit the changes.
         do {

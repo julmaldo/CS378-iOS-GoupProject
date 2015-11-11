@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
         }
         currentWeightLabel.text = user.valueForKey("currentWeight") as? String
-        //goalWeightLabel.text = user.valueForKey("goalWeight") as? String
+        goalWeightLabel.text = user.valueForKey("goalWeight") as? String
         for i in 1...4{
             let imageName = "Avatar\(i).jpg"
             imageList.append(UIImage(named: imageName)!)
@@ -69,10 +69,8 @@ class ViewController: UIViewController {
         
         let managedContext = appDelegate.managedObjectContext
         
-        //
         let fetchRequest = NSFetchRequest(entityName:"User")
         
-        //
         var fetchedResults:[NSManagedObject]? = nil
         
         do {
@@ -104,7 +102,6 @@ class ViewController: UIViewController {
         self.alertController!.addAction(cancel)
         
         self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            // Enter the textfield customization code here.
             self.userWeightTextField = textField
             self.userWeightTextField?.placeholder = "Enter your cuurent weight"
         }
