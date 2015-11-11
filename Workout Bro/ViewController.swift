@@ -106,7 +106,7 @@ class ViewController: UIViewController {
         
         self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
             self.userWeightTextField = textField
-            self.userWeightTextField?.placeholder = "Enter your cuurent weight"
+            self.userWeightTextField?.placeholder = "Enter your current weight"
         }
         
         presentViewController(self.alertController!, animated: true, completion: nil)
