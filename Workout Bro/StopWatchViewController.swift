@@ -46,7 +46,7 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             displayTimeLabel.text = String(timeRemain)
         }
         else{
-            displayTimeLabel.text = "Done."
+            displayTimeLabel.text = "Done!"
             timer!.invalidate()
             timer = nil
             isRun = false
