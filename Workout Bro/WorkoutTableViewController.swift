@@ -32,7 +32,22 @@ class WorkoutTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return data.count()
     }
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
     
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        cell?.contentView.backgroundColor = UIColor(red:0.68, green:0.26, blue:0.09, alpha:1.0)
+        cell?.backgroundColor = UIColor(red:0.68, green:0.26, blue:0.09, alpha:1.0)
+    }
+    
+//  weird blackout option
+//    override func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+//        var cell = tableView.cellForRowAtIndexPath(indexPath)
+//        cell?.contentView.backgroundColor = UIColor.blackColor()
+//        cell?.backgroundColor = UIColor.blackColor()
+//    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("workout", forIndexPath: indexPath)
@@ -40,7 +55,6 @@ class WorkoutTableViewController: UITableViewController {
         // Configure the cell...
         let index:Int = indexPath.row
         let workout:String = self.data.getWorkout(index)
-        
         cell.textLabel!.text = workout
         
         return cell

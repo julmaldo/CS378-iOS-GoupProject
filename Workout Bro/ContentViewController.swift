@@ -10,9 +10,9 @@ import UIKit
 
 class ContentViewController: UIViewController {
     
-    @IBOutlet weak var workoutName: UILabel!
-    @IBOutlet weak var workoutImage: UIImageView!
     @IBOutlet weak var recWeight: UILabel!
+    @IBOutlet weak var workoutImage: UIImageView!
+    @IBOutlet weak var workoutName: UILabel!
     
     var workoutIndex: String!
     var imageIndex: UIImage!
