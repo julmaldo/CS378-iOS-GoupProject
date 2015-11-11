@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		156C572A1BED3E7A00BCCCB1 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C57291BED3E7A00BCCCB1 /* ContentViewController.swift */; };
+		156C572C1BED407500BCCCB1 /* InitialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C572B1BED407500BCCCB1 /* InitialContentViewController.swift */; };
+		1595D9DC1BF2C78800F15462 /* Calf Raises.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9CA1BF2C78800F15462 /* Calf Raises.png */; };
+		1595D9DD1BF2C78800F15462 /* Chest Fly.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9CB1BF2C78800F15462 /* Chest Fly.png */; };
+		1595D9DE1BF2C78800F15462 /* Chest Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9CC1BF2C78800F15462 /* Chest Press.png */; };
+		1595D9DF1BF2C78800F15462 /* Crunches.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9CD1BF2C78800F15462 /* Crunches.png */; };
+		1595D9E01BF2C78800F15462 /* Curls.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9CE1BF2C78800F15462 /* Curls.png */; };
+		1595D9E11BF2C78800F15462 /* Deadlift.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9CF1BF2C78800F15462 /* Deadlift.png */; };
+		1595D9E21BF2C78800F15462 /* Dumbbell Row.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D01BF2C78800F15462 /* Dumbbell Row.png */; };
+		1595D9E31BF2C78800F15462 /* Dumbbell Shrug.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D11BF2C78800F15462 /* Dumbbell Shrug.png */; };
+		1595D9E41BF2C78800F15462 /* Front Raise.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D21BF2C78800F15462 /* Front Raise.png */; };
+		1595D9E51BF2C78800F15462 /* Incline Chest Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D31BF2C78800F15462 /* Incline Chest Press.png */; };
+		1595D9E61BF2C78800F15462 /* Lateral Raise.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D41BF2C78800F15462 /* Lateral Raise.png */; };
+		1595D9E71BF2C78800F15462 /* Lunges.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D51BF2C78800F15462 /* Lunges.png */; };
+		1595D9E81BF2C78800F15462 /* Planks.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D61BF2C78800F15462 /* Planks.png */; };
+		1595D9E91BF2C78800F15462 /* Reverse Curls.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D71BF2C78800F15462 /* Reverse Curls.png */; };
+		1595D9EA1BF2C78800F15462 /* Shoulder Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D81BF2C78800F15462 /* Shoulder Press.png */; };
+		1595D9EB1BF2C78800F15462 /* Sit Ups.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9D91BF2C78800F15462 /* Sit Ups.png */; };
+		1595D9EC1BF2C78800F15462 /* Squats.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9DA1BF2C78800F15462 /* Squats.png */; };
+		1595D9ED1BF2C78800F15462 /* Tricep Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 1595D9DB1BF2C78800F15462 /* Tricep Press.png */; };
+		15D1D9DD1BF15B9D00D74AEB /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1D9DC1BF15B9D00D74AEB /* Workout.swift */; };
 		15DEF25C1BD99C670031515C /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DEF25B1BD99C670031515C /* WorkoutTableViewController.swift */; };
 		15DEF2601BD99D020031515C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DEF25F1BD99D020031515C /* DataModel.swift */; };
 		435F4DD51BDAF70700EE61CE /* Avatar1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 435F4DD11BDAF70700EE61CE /* Avatar1.jpg */; };
@@ -69,6 +90,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		156C57291BED3E7A00BCCCB1 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		156C572B1BED407500BCCCB1 /* InitialContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialContentViewController.swift; sourceTree = "<group>"; };
+		1595D9CA1BF2C78800F15462 /* Calf Raises.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calf Raises.png"; sourceTree = "<group>"; };
+		1595D9CB1BF2C78800F15462 /* Chest Fly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chest Fly.png"; sourceTree = "<group>"; };
+		1595D9CC1BF2C78800F15462 /* Chest Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chest Press.png"; sourceTree = "<group>"; };
+		1595D9CD1BF2C78800F15462 /* Crunches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Crunches.png; sourceTree = "<group>"; };
+		1595D9CE1BF2C78800F15462 /* Curls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Curls.png; sourceTree = "<group>"; };
+		1595D9CF1BF2C78800F15462 /* Deadlift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Deadlift.png; sourceTree = "<group>"; };
+		1595D9D01BF2C78800F15462 /* Dumbbell Row.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dumbbell Row.png"; sourceTree = "<group>"; };
+		1595D9D11BF2C78800F15462 /* Dumbbell Shrug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dumbbell Shrug.png"; sourceTree = "<group>"; };
+		1595D9D21BF2C78800F15462 /* Front Raise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Front Raise.png"; sourceTree = "<group>"; };
+		1595D9D31BF2C78800F15462 /* Incline Chest Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Incline Chest Press.png"; sourceTree = "<group>"; };
+		1595D9D41BF2C78800F15462 /* Lateral Raise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lateral Raise.png"; sourceTree = "<group>"; };
+		1595D9D51BF2C78800F15462 /* Lunges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lunges.png; sourceTree = "<group>"; };
+		1595D9D61BF2C78800F15462 /* Planks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Planks.png; sourceTree = "<group>"; };
+		1595D9D71BF2C78800F15462 /* Reverse Curls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reverse Curls.png"; sourceTree = "<group>"; };
+		1595D9D81BF2C78800F15462 /* Shoulder Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shoulder Press.png"; sourceTree = "<group>"; };
+		1595D9D91BF2C78800F15462 /* Sit Ups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sit Ups.png"; sourceTree = "<group>"; };
+		1595D9DA1BF2C78800F15462 /* Squats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Squats.png; sourceTree = "<group>"; };
+		1595D9DB1BF2C78800F15462 /* Tricep Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tricep Press.png"; sourceTree = "<group>"; };
+		15D1D9DC1BF15B9D00D74AEB /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		15DEF25B1BD99C670031515C /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		15DEF25F1BD99D020031515C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = ../DataModel.swift; sourceTree = "<group>"; };
 		435F4DD11BDAF70700EE61CE /* Avatar1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Avatar1.jpg; path = "../loadingBar 2/Avatar1.jpg"; sourceTree = "<group>"; };
@@ -144,6 +186,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1595D9C91BF2C78800F15462 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				1595D9CA1BF2C78800F15462 /* Calf Raises.png */,
+				1595D9CB1BF2C78800F15462 /* Chest Fly.png */,
+				1595D9CC1BF2C78800F15462 /* Chest Press.png */,
+				1595D9CD1BF2C78800F15462 /* Crunches.png */,
+				1595D9CE1BF2C78800F15462 /* Curls.png */,
+				1595D9CF1BF2C78800F15462 /* Deadlift.png */,
+				1595D9D01BF2C78800F15462 /* Dumbbell Row.png */,
+				1595D9D11BF2C78800F15462 /* Dumbbell Shrug.png */,
+				1595D9D21BF2C78800F15462 /* Front Raise.png */,
+				1595D9D31BF2C78800F15462 /* Incline Chest Press.png */,
+				1595D9D41BF2C78800F15462 /* Lateral Raise.png */,
+				1595D9D51BF2C78800F15462 /* Lunges.png */,
+				1595D9D61BF2C78800F15462 /* Planks.png */,
+				1595D9D71BF2C78800F15462 /* Reverse Curls.png */,
+				1595D9D81BF2C78800F15462 /* Shoulder Press.png */,
+				1595D9D91BF2C78800F15462 /* Sit Ups.png */,
+				1595D9DA1BF2C78800F15462 /* Squats.png */,
+				1595D9DB1BF2C78800F15462 /* Tricep Press.png */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
 		4392E7BB1BD71BF100AE5D86 /* loadingBar 2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +263,7 @@
 		43AF4E941BCC8FE4003298DB /* Workout Bro */ = {
 			isa = PBXGroup;
 			children = (
+				1595D9C91BF2C78800F15462 /* Exercises */,
 				43E40DC61BE2D74900B386A2 /* Buttons */,
 				4AEC232A1BDAF794002A85BA /* avatar */,
 				43AF4E951BCC8FE4003298DB /* AppDelegate.swift */,
@@ -209,6 +277,9 @@
 				437253B41BD1AA56009E2EDE /* Workout-Bro-.jpg */,
 				43AF4E9F1BCC8FE4003298DB /* Assets.xcassets */,
 				15DEF25B1BD99C670031515C /* WorkoutTableViewController.swift */,
+				156C572B1BED407500BCCCB1 /* InitialContentViewController.swift */,
+				156C57291BED3E7A00BCCCB1 /* ContentViewController.swift */,
+				15D1D9DC1BF15B9D00D74AEB /* Workout.swift */,
 				4AD3CE621BD0608F008B21A2 /* StopWatchViewController.swift */,
 				43AF4EA11BCC8FE4003298DB /* LaunchScreen.storyboard */,
 				43AF4EA41BCC8FE4003298DB /* Info.plist */,
@@ -362,13 +433,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4392E7D31BD71BF100AE5D86 /* 03.jpg in Resources */,
+				1595D9E91BF2C78800F15462 /* Reverse Curls.png in Resources */,
 				4392E7E01BD71BF100AE5D86 /* 16.jpg in Resources */,
 				4392E7E11BD71BF100AE5D86 /* 17.jpg in Resources */,
+				1595D9DF1BF2C78800F15462 /* Crunches.png in Resources */,
 				4392E7D21BD71BF100AE5D86 /* 02.jpg in Resources */,
 				4392E7D71BD71BF100AE5D86 /* 07.jpg in Resources */,
 				435F4DD61BDAF70700EE61CE /* Avatar2.jpg in Resources */,
+				1595D9DE1BF2C78800F15462 /* Chest Press.png in Resources */,
+				1595D9E51BF2C78800F15462 /* Incline Chest Press.png in Resources */,
 				4392E7D41BD71BF100AE5D86 /* 04.jpg in Resources */,
 				4392E7DE1BD71BF100AE5D86 /* 14.jpg in Resources */,
+				1595D9E11BF2C78800F15462 /* Deadlift.png in Resources */,
 				4392E7D91BD71BF100AE5D86 /* 09.jpg in Resources */,
 				43E40DC51BE2D74000B386A2 /* greenButton.jpg in Resources */,
 				4392E7DD1BD71BF100AE5D86 /* 13.jpg in Resources */,
@@ -377,21 +453,34 @@
 				4392E7E41BD71BF100AE5D86 /* 20.jpg in Resources */,
 				4392E7E51BD71BF100AE5D86 /* Screen Shot 2015-10-16 at 5.58.17 PM.png in Resources */,
 				43AF4EA01BCC8FE4003298DB /* Assets.xcassets in Resources */,
+				1595D9EB1BF2C78800F15462 /* Sit Ups.png in Resources */,
 				435F4DD51BDAF70700EE61CE /* Avatar1.jpg in Resources */,
 				4392E7DA1BD71BF100AE5D86 /* 10.jpg in Resources */,
 				4392E7E21BD71BF100AE5D86 /* 18.jpg in Resources */,
 				435F4DD81BDAF70700EE61CE /* Avatar4.jpg in Resources */,
+				1595D9E71BF2C78800F15462 /* Lunges.png in Resources */,
+				1595D9EA1BF2C78800F15462 /* Shoulder Press.png in Resources */,
+				1595D9E41BF2C78800F15462 /* Front Raise.png in Resources */,
 				4392E7D61BD71BF100AE5D86 /* 06.jpg in Resources */,
 				435F4DD71BDAF70700EE61CE /* Avatar3.jpg in Resources */,
 				4392E7D51BD71BF100AE5D86 /* 05.jpg in Resources */,
+				1595D9E21BF2C78800F15462 /* Dumbbell Row.png in Resources */,
+				1595D9E01BF2C78800F15462 /* Curls.png in Resources */,
 				43AF4E9B1BCC8FE4003298DB /* Main.storyboard in Resources */,
+				1595D9E31BF2C78800F15462 /* Dumbbell Shrug.png in Resources */,
 				4392E7D81BD71BF100AE5D86 /* 08.jpg in Resources */,
 				4392E7E31BD71BF100AE5D86 /* 19.jpg in Resources */,
 				437253B51BD1AA56009E2EDE /* Workout-Bro-.jpg in Resources */,
+				1595D9E61BF2C78800F15462 /* Lateral Raise.png in Resources */,
 				4392E7DF1BD71BF100AE5D86 /* 15.jpg in Resources */,
 				4392E7D11BD71BF100AE5D86 /* 01.jpg in Resources */,
 				4392E7DB1BD71BF100AE5D86 /* 11.jpg in Resources */,
+				1595D9ED1BF2C78800F15462 /* Tricep Press.png in Resources */,
+				1595D9DD1BF2C78800F15462 /* Chest Fly.png in Resources */,
 				43E40DC31BE2D73200B386A2 /* redButton.jpg in Resources */,
+				1595D9E81BF2C78800F15462 /* Planks.png in Resources */,
+				1595D9EC1BF2C78800F15462 /* Squats.png in Resources */,
+				1595D9DC1BF2C78800F15462 /* Calf Raises.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +509,11 @@
 				4AD3CE631BD0608F008B21A2 /* StopWatchViewController.swift in Sources */,
 				43AF4E981BCC8FE4003298DB /* ViewController.swift in Sources */,
 				43AF4E961BCC8FE4003298DB /* AppDelegate.swift in Sources */,
+				156C572A1BED3E7A00BCCCB1 /* ContentViewController.swift in Sources */,
 				43E8D4901BEBEA2500684DDA /* set counter.swift in Sources */,
+				15D1D9DD1BF15B9D00D74AEB /* Workout.swift in Sources */,
 				43AF4E9E1BCC8FE4003298DB /* Workout_Bro.xcdatamodeld in Sources */,
+				156C572C1BED407500BCCCB1 /* InitialContentViewController.swift in Sources */,
 				15DEF2601BD99D020031515C /* DataModel.swift in Sources */,
 				43E8D4921BEBEB0500684DDA /* CounterView.swift in Sources */,
 				43A099571BED3315004EC864 /* SettingsViewController.swift in Sources */,

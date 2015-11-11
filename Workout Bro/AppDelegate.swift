@@ -61,6 +61,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
         
+        let pageController = UIPageControl.appearance()
+        pageController.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageController.currentPageIndicatorTintColor = UIColor.blackColor()
+        pageController.backgroundColor = UIColor.whiteColor()
+        
         return true
     }
 
