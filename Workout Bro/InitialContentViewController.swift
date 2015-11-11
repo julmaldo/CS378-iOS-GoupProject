@@ -2,7 +2,7 @@
 //  InitialContentViewController.swift
 //  Workout Bro
 //
-//  Created by Zach on 11/6/15.
+//  Created by Chad on 11/6/15.
 //  Copyright © 2015 JEC INC. All rights reserved.
 //
 
