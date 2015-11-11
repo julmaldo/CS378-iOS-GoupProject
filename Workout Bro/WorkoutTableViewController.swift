@@ -14,7 +14,6 @@ class WorkoutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -87,15 +86,19 @@ class WorkoutTableViewController: UITableViewController {
     }
     */
     
-    /*
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
+    // Pass the selected object to the new view controller
+        let indexPath:NSIndexPath? = self.tableView!.indexPathForSelectedRow!
+        
+        let vc:InitialContentViewController = segue.destinationViewController as! InitialContentViewController
+        
+        vc.workoutExercises = self.data.getExercises(indexPath!.row)
+   }
+
 
 
 }
