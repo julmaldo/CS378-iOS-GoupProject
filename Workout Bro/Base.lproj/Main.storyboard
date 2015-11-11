@@ -275,7 +275,6 @@
                     <connections>
                         <outlet property="calendarButton" destination="u5b-FA-J08" id="FHJ-86-MOL"/>
                         <outlet property="currentWeightLabel" destination="3jV-Fl-fyY" id="s5i-RA-mHC"/>
-                        <outlet property="goalWeight" destination="8m7-d9-ds5" id="jhz-tx-InP"/>
                         <outlet property="goalWeightLabel" destination="8m7-d9-ds5" id="bjf-Uq-LAq"/>
                         <outlet property="myImageView" destination="pIL-kY-Yv3" id="m5r-5P-vbA"/>
                         <outlet property="workoutButton" destination="FKb-7e-bZQ" id="q9t-aZ-Nsi"/>

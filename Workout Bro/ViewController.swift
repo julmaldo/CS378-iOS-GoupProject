@@ -36,8 +36,11 @@ class ViewController: UIViewController {
             print("First launch, setting NSUserDefault.")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
         }
+        if user != ""{
         currentWeightLabel.text = user.valueForKey("currentWeight") as? String
         goalWeightLabel.text = user.valueForKey("goalWeight") as? String
+        }
+        
         for i in 1...4{
             let imageName = "Avatar\(i).jpg"
             imageList.append(UIImage(named: imageName)!)
