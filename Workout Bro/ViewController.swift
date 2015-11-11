@@ -8,15 +8,21 @@
 
 import UIKit
 import EventKit
+import CoreData
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var workoutButton: UIButton!
     @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var myImageView: UIImageView!
+    @IBOutlet weak var currentWeightLabel: UILabel!
+    @IBOutlet weak var goalWeightLabel: UILabel!
+    var user:NSObject = ""
+    
+    var alertController:UIAlertController? = nil
+    var userWeightTextField: UITextField? = nil
     
     var imageList = [UIImage]()
-    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +36,8 @@ class ViewController: UIViewController {
             print("First launch, setting NSUserDefault.")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
         }
-        
+        currentWeightLabel.text = user.valueForKey("currentWeight") as? String
+        goalWeightLabel.text = user.valueForKey("goalWeight") as? String
         for i in 1...4{
             let imageName = "Avatar\(i).jpg"
             imageList.append(UIImage(named: imageName)!)
@@ -55,10 +62,56 @@ class ViewController: UIViewController {
     
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName:"User")
+        
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        if let results = fetchedResults {
+            user = results
+        } else {
+            print("Could not fetch")
+        }
+    }
+
+    @IBAction func userUpdateWeight(sender: AnyObject) {
+        self.alertController = UIAlertController(title: "Update Body Weight", message: "How much do you currently weight?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            print("You entered \(self.userWeightTextField!.text!)")
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+        }
+        
+        self.alertController!.addAction(ok)
+        self.alertController!.addAction(cancel)
+        
+        self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            self.userWeightTextField = textField
+            self.userWeightTextField?.placeholder = "Enter your cuurent weight"
+        }
+        
+        presentViewController(self.alertController!, animated: true, completion: nil)
+    }
+    
     func startAnimation(){
         myImageView.animationImages = imageList
         myImageView.animationDuration = 2
         myImageView.startAnimating()
     }
-    
 }

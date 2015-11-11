@@ -11,7 +11,6 @@ let π:CGFloat = CGFloat(M_PI)
             if counter <=  NoOfGlasses {
                 //the view needs to be refreshed
                 setNeedsDisplay()
-                
             }
         }
     }
@@ -44,8 +43,6 @@ let π:CGFloat = CGFloat(M_PI)
         path.lineWidth = arcWidth
         counterColor.setStroke()
         path.stroke()
-        
-        //Draw the outline
         
         //1 - first calculate the difference between the two angles
         //ensuring it is positive

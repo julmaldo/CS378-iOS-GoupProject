@@ -56,6 +56,7 @@
 		4392E7E31BD71BF100AE5D86 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4392E7CE1BD71BF100AE5D86 /* 19.jpg */; };
 		4392E7E41BD71BF100AE5D86 /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4392E7CF1BD71BF100AE5D86 /* 20.jpg */; };
 		4392E7E51BD71BF100AE5D86 /* Screen Shot 2015-10-16 at 5.58.17 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 4392E7D01BD71BF100AE5D86 /* Screen Shot 2015-10-16 at 5.58.17 PM.png */; };
+		43A099571BED3315004EC864 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A099561BED3315004EC864 /* SettingsViewController.swift */; };
 		43AF4E961BCC8FE4003298DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4E951BCC8FE4003298DB /* AppDelegate.swift */; };
 		43AF4E981BCC8FE4003298DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF4E971BCC8FE4003298DB /* ViewController.swift */; };
 		43AF4E9B1BCC8FE4003298DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AF4E991BCC8FE4003298DB /* Main.storyboard */; };
@@ -138,6 +139,7 @@
 		4392E7CE1BD71BF100AE5D86 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
 		4392E7CF1BD71BF100AE5D86 /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
 		4392E7D01BD71BF100AE5D86 /* Screen Shot 2015-10-16 at 5.58.17 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2015-10-16 at 5.58.17 PM.png"; sourceTree = "<group>"; };
+		43A099561BED3315004EC864 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		43AF4E921BCC8FE4003298DB /* Workout Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout Bro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AF4E951BCC8FE4003298DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43AF4E971BCC8FE4003298DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				43E8D48F1BEBEA2500684DDA /* set counter.swift */,
 				43E8D4911BEBEB0500684DDA /* CounterView.swift */,
 				43AF4E991BCC8FE4003298DB /* Main.storyboard */,
+				43A099561BED3315004EC864 /* SettingsViewController.swift */,
 				4392E7BB1BD71BF100AE5D86 /* loadingBar 2 */,
 				437253B41BD1AA56009E2EDE /* Workout-Bro-.jpg */,
 				43AF4E9F1BCC8FE4003298DB /* Assets.xcassets */,
@@ -513,6 +516,7 @@
 				156C572C1BED407500BCCCB1 /* InitialContentViewController.swift in Sources */,
 				15DEF2601BD99D020031515C /* DataModel.swift in Sources */,
 				43E8D4921BEBEB0500684DDA /* CounterView.swift in Sources */,
+				43A099571BED3315004EC864 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

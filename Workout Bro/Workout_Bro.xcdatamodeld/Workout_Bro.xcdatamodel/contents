@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
-    <entity name="Bro" syncable="YES">
-        <attribute name="broImage" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="exp" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="lastWorkoutComplete" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="lvl" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-    </entity>
-    <entity name="Excercise" syncable="YES">
-        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lastWeightUsed" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="reps" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="sets" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
     <entity name="User" syncable="YES">
-        <attribute name="currentWeight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="goalWeight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="progress" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="startWeight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-    </entity>
-    <entity name="WorkoutRoutine" syncable="YES">
-        <attribute name="excer" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goalWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startWeight" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Bro" positionX="-144" positionY="18" width="128" height="105"/>
-        <element name="Excercise" positionX="-54" positionY="-135" width="128" height="120"/>
-        <element name="User" positionX="-281" positionY="-0" width="128" height="120"/>
-        <element name="WorkoutRoutine" positionX="-54" positionY="90" width="128" height="75"/>
+        <element name="User" positionX="-281" positionY="-0" width="128" height="90"/>
     </elements>
 </model>
