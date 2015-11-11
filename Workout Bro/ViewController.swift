@@ -17,8 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var currentWeightLabel: UILabel!
     @IBOutlet weak var goalWeightLabel: UILabel!
+    @IBOutlet weak var userName: UILabel!
     
-    var user:NSObject = ""
+    var users = [NSManagedObject]()
     
     var alertController:UIAlertController? = nil
     var userWeightTextField: UITextField? = nil
@@ -38,11 +39,6 @@ class ViewController: UIViewController {
         else {
             print("First launch, setting NSUserDefault.")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
-        }
-        
-        if user != ""{
-            currentWeightLabel.text = user.valueForKey("currentWeight") as? String
-            goalWeightLabel.text = user.valueForKey("goalWeight") as? String
         }
         
         //animations
@@ -92,9 +88,15 @@ class ViewController: UIViewController {
         }
         
         if let results = fetchedResults {
-            user = results
+            users = results
         } else {
             print("Could not fetch")
+        }
+        if users.count > 0{
+            let user = users[0]
+            currentWeightLabel.text = user.valueForKey("currentWeight") as? String
+            goalWeightLabel.text = user.valueForKey("goalWeight") as? String
+            userName.text = user.valueForKey("userName") as? String
         }
     }
     

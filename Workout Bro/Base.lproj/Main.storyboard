@@ -295,6 +295,7 @@
                         <outlet property="currentWeightLabel" destination="3jV-Fl-fyY" id="s5i-RA-mHC"/>
                         <outlet property="goalWeightLabel" destination="8m7-d9-ds5" id="bjf-Uq-LAq"/>
                         <outlet property="myImageView" destination="pIL-kY-Yv3" id="m5r-5P-vbA"/>
+                        <outlet property="userName" destination="eMo-UK-2Jj" id="YFu-5P-L87"/>
                         <outlet property="workoutButton" destination="FKb-7e-bZQ" id="q9t-aZ-Nsi"/>
                     </connections>
                 </viewController>
@@ -475,6 +476,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gja-Rn-6D1">
+                                <rect key="frame" x="205" y="88" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofo-Yp-wfZ">
+                                <rect key="frame" x="106" y="97" width="91" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.99375382450000005" green="1" blue="0.83061218160000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -484,6 +498,7 @@
                         <outlet property="currentWeightTF" destination="kn9-dm-nav" id="bhD-kP-CDe"/>
                         <outlet property="goalWeightTF" destination="LZl-TL-SAS" id="PKf-VG-gIp"/>
                         <outlet property="startingWeightTF" destination="eYA-LE-bWS" id="PME-Qm-7KN"/>
+                        <outlet property="userNameTF" destination="gja-Rn-6D1" id="4xa-Zb-vps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bh5-9R-w55" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -25,8 +25,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var startingWeightTF: UITextField!
     @IBOutlet weak var currentWeightTF: UITextField!
     @IBOutlet weak var goalWeightTF: UITextField!
+    @IBOutlet weak var userNameTF: UITextField!
   
-    func saveUser(currentWeight: String, goalWeight: String, startingWeight:String) {
+    func saveUser(currentWeight: String, goalWeight: String, startingWeight:String,userName:String) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -41,6 +42,7 @@ class SettingsViewController: UIViewController {
         user.setValue(currentWeight, forKey: "currentWeight")
         user.setValue(goalWeight, forKey: "goalWeight")
         user.setValue(startingWeight, forKey: "startWeight")
+        user.setValue(userName, forKey: "userName")
         
         // Commit the changes.
         do {
@@ -58,7 +60,7 @@ class SettingsViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func DonePushed(sender: AnyObject) {
-        saveUser(currentWeightTF.text!, goalWeight: goalWeightTF.text!, startingWeight: startingWeightTF.text!)
+        saveUser(currentWeightTF.text!, goalWeight: goalWeightTF.text!, startingWeight: startingWeightTF.text!, userName:userNameTF.text! )
         dismissViewControllerAnimated(true, completion: nil)
     }
     /*

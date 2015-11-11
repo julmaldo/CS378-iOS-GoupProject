@@ -4,8 +4,9 @@
         <attribute name="currentWeight" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="goalWeight" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startWeight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-281" positionY="-0" width="128" height="90"/>
+        <element name="User" positionX="-281" positionY="-0" width="128" height="105"/>
     </elements>
 </model>
