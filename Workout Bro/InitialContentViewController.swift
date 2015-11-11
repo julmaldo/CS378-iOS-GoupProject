@@ -67,7 +67,7 @@ class InitialContentViewController: UIViewController, UIPageViewControllerDataSo
         let vc = viewController as! ContentViewController
         var index = vc.pageIndex as Int
         
-        if(index == 0 || index == NSNotFound){
+        if(index == NSNotFound){
             return nil
         }
         
