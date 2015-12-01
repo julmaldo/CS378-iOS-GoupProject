@@ -21,7 +21,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Finish Set">
+                                <state key="normal" title="Do Set 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -135,6 +135,7 @@
                         <outlet property="counterLabel" destination="K97-hZ-tGb" id="HT3-JW-nka"/>
                         <outlet property="counterTotalLabel" destination="bXX-9T-vTC" id="LUJ-wD-1mz"/>
                         <outlet property="counterView" destination="bp2-GK-ThW" id="UbE-my-qkP"/>
+                        <outlet property="currSet" destination="T1J-5v-ygm" id="PmP-OI-Fa6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Aj-sF-E4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,7 +145,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Workout_Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -280,6 +280,7 @@
                         <outlet property="workoutButton" destination="FKb-7e-bZQ" id="q9t-aZ-Nsi"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="720.5" y="744.5"/>
         </scene>
@@ -632,7 +633,7 @@
                                         <animations/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzZ-Ae-FKH">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="21"/>
+                                        <rect key="frame" x="0.0" y="75" width="375" height="35"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

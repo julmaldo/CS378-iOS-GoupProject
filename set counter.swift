@@ -15,6 +15,8 @@ class set_counter: UIViewController {
     @IBOutlet weak var counterTotalLabel: UILabel!
     @IBOutlet weak var counterView: CounterView!
     @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var currSet: UIButton!
+    var idx = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +35,27 @@ class set_counter: UIViewController {
     @IBAction func redoSetPushed(sender: AnyObject) {
         if counterView.counter > 0 {
             counterView.counter--
+            idx--
+            currSet.setTitle("Do Set " + idx.description, forState: .Normal)
         }
         counterLabel.text = String(counterView.counter)
     }
     @IBAction func finishedSetPushed(sender: UIButton) {
         if counterView.counter < counterView.counterTotal {
             counterView.counter++
+            idx++
+        }
+        else{
+            dismissViewControllerAnimated(true, completion: nil)
         }
         counterLabel.text = String(counterView.counter)
+        if(idx != 9){
+            currSet.setTitle("Do Set " + idx.description, forState: .Normal)
+        }
+        else{
+            currSet.setTitle("Done & Exit", forState: .Normal)
+        }
+        
     }
     @IBAction func startOverPushed(sender: AnyObject) {
         while (counterView.counter > 0){
