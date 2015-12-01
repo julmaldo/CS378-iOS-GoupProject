@@ -7,13 +7,11 @@
 //
 
 import UIKit
-import EventKit
 import CoreData
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var workoutButton: UIButton!
-    @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var currentWeightLabel: UILabel!
     @IBOutlet weak var goalWeightLabel: UILabel!
@@ -29,7 +27,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.workoutButton.layer.cornerRadius = 10.0
-        self.calendarButton.layer.cornerRadius = 10.0
         let firstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
        
         if firstLaunch  {
@@ -48,22 +45,6 @@ class ViewController: UIViewController {
         }
         
         startAnimation()
-        
-        //START- notification code
-        let notification:UILocalNotification = UILocalNotification()
-        
-        //hardcoded date until calendar is fixed
-        // var workDate = blah
-        //catergories need to be fixed
-        // notification.category = "FIRST_CATERGORY"
-        notification.soundName = UILocalNotificationDefaultSoundName
-        notification.alertBody = "Have you worked out today?"
-        notification.timeZone = NSTimeZone.localTimeZone()
-        notification.fireDate = NSDate(timeIntervalSinceNow: 5)
-        notification.repeatInterval = NSCalendarUnit.Day
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        //END
     
     }
     
