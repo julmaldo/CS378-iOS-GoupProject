@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         else {
             print("First launch, setting NSUserDefault.")
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
+            self.performSegueWithIdentifier("setup", sender: nil)
         }
         
         //animations
