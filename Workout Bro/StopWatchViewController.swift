@@ -74,6 +74,11 @@ class StopWatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return "\(arrPicks[row])"
     }
     
+    @IBAction func exit(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+
+    }
+    
     /*
     // MARK: - Navigation
 
