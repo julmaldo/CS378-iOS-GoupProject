@@ -83,11 +83,14 @@ class ViewController: UIViewController {
     
     //alert to update weight, waiting for complete data model to update
     @IBAction func userUpdateWeight(sender: AnyObject) {
+        
         self.alertController = UIAlertController(title: "Update Body Weight", message: "How much do you currently weight?", preferredStyle: UIAlertControllerStyle.Alert)
         
-        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            print("You entered \(self.userWeightTextField!.text!)")
+        let ok = UIAlertAction(title: "Update", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            self.updateCurrentWeight(self.userWeightTextField!.text!)
+            //print("You entered \(self.userWeightTextField!.text!)")
         })
+        
         let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
         }
         
@@ -100,6 +103,16 @@ class ViewController: UIViewController {
         }
         
         presentViewController(self.alertController!, animated: true, completion: nil)
+    }
+    
+    //EM: update current date from the alert
+    func updateCurrentWeight(curr:String){
+        var users = [NSManagedObject]()
+        if(users.count > 0){
+            let user = users[0]
+            user.setValue(curr, forKey: "currentWeight")
+            
+        }
     }
     
     func startAnimation(){

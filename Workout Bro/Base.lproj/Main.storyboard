@@ -302,7 +302,6 @@
         <!--Stop Watch View Controller-->
         <scene sceneID="Ryl-xg-cPS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7u-Q2-DxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="NPU-F9-n9x" customClass="StopWatchViewController" customModule="Workout_Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pkw-jc-aW6"/>
@@ -388,6 +387,7 @@
                         <outlet property="userTime" destination="NOk-BA-ZyF" id="cPF-z7-EY0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7u-Q2-DxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706.5" y="-27.5"/>
         </scene>
