@@ -103,7 +103,8 @@ class SettingsViewController: UIViewController {
         presentViewController(self.alertController!, animated: true, completion: nil)
     }
     
-    @IBAction func startCurr(sender: AnyObject) {
+    @IBAction func updateStart(sender: AnyObject) {
+        
         self.alertController = UIAlertController(title: "Update Starting Weight", message: "What was your starting weight?", preferredStyle: UIAlertControllerStyle.Alert)
         
         let ok = UIAlertAction(title: "Update", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
@@ -140,8 +141,9 @@ class SettingsViewController: UIViewController {
         
         presentViewController(self.alertController!, animated: true, completion: nil)
     }
+
     
-    @IBAction func updateCurr(sender: AnyObject) {
+    @IBAction func updateCurrent(sender: AnyObject) {
         self.alertController = UIAlertController(title: "Update Current Weight", message: "How much do you currently weight?", preferredStyle: UIAlertControllerStyle.Alert)
         
         let ok = UIAlertAction(title: "Update", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
