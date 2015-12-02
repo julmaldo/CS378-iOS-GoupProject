@@ -13,11 +13,13 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var recWeight: UILabel!
     @IBOutlet weak var workoutImage: UIImageView!
     @IBOutlet weak var workoutName: UILabel!
+    @IBOutlet weak var btnFinish: UIButton!
     
     var workoutIndex: String!
     var imageIndex: UIImage!
     var weightIndex: String!
     var pageIndex: Int!
+    var btnVis: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,9 @@ class ContentViewController: UIViewController {
         self.workoutName.text = self.workoutIndex
         self.workoutImage.image = self.imageIndex
         self.recWeight.text = self.weightIndex
+        if(!btnVis){
+            btnFinish.hidden = true;
+        }
     }
 
     override func didReceiveMemoryWarning() {
