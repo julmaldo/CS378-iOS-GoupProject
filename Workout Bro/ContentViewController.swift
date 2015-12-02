@@ -33,8 +33,34 @@ class ContentViewController: UIViewController {
         if(!btnVis){
             btnFinish.hidden = true;
         }
+        showUser()
     }
-
+    
+    func showUser(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
+        let managedContext = appDelegate.managedObjectContext
+    
+        let fetchRequest = NSFetchRequest(entityName:"Bro")
+    
+        var fetchedResults:[NSManagedObject]? = nil
+    
+        do {
+            try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    
+        if let results = fetchedResults {
+            users = results
+        } else {
+            print("Could not fetch")
+        }
+    
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
