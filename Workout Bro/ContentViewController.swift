@@ -23,7 +23,7 @@ class ContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
         self.workoutName.text = self.workoutIndex
         self.workoutImage.image = self.imageIndex
@@ -32,7 +32,7 @@ class ContentViewController: UIViewController {
             btnFinish.hidden = true;
         }
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
