@@ -47,6 +47,12 @@ class InitialContentViewController: UIViewController, UIPageViewControllerDataSo
         vc.imageIndex = self.workoutExercises[index].getGuide()
         vc.weightIndex = self.workoutExercises[index].getWeight()
         vc.pageIndex = index
+        if(index == (self.workoutExercises.count - 1)){
+            vc.btnVis = true;
+        }
+        else{
+            vc.btnVis = false;
+        }
         
         return vc
     }
