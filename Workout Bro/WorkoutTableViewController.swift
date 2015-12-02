@@ -14,6 +14,7 @@ class WorkoutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = false
     }
     
     override func didReceiveMemoryWarning() {
