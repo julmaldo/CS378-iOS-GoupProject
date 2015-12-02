@@ -104,7 +104,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func startCurr(sender: AnyObject) {
-        self.alertController = UIAlertController(title: "Update Body Weight", message: "What was your weight?", preferredStyle: UIAlertControllerStyle.Alert)
+        self.alertController = UIAlertController(title: "Update Starting Weight", message: "What was your starting weight?", preferredStyle: UIAlertControllerStyle.Alert)
         
         let ok = UIAlertAction(title: "Update", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -142,7 +142,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func updateCurr(sender: AnyObject) {
-        self.alertController = UIAlertController(title: "Update Body Weight", message: "How much do you currently weight?", preferredStyle: UIAlertControllerStyle.Alert)
+        self.alertController = UIAlertController(title: "Update Current Weight", message: "How much do you currently weight?", preferredStyle: UIAlertControllerStyle.Alert)
         
         let ok = UIAlertAction(title: "Update", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -173,7 +173,7 @@ class SettingsViewController: UIViewController {
         
         self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
             self.userWeightTextField = textField
-            self.userWeightTextField?.placeholder = "Enter your current weight"
+            self.userWeightTextField?.placeholder = "Enter your current weight."
         }
         
         presentViewController(self.alertController!, animated: true, completion: nil)
@@ -211,7 +211,7 @@ class SettingsViewController: UIViewController {
         
         self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
             self.userWeightTextField = textField
-            self.userWeightTextField?.placeholder = "Enter a goal weight"
+            self.userWeightTextField?.placeholder = "Enter a goal weight."
         }
         
         presentViewController(self.alertController!, animated: true, completion: nil)
