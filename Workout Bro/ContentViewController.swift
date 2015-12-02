@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
+import CoreData
 class ContentViewController: UIViewController {
     
     @IBOutlet weak var recWeight: UILabel!
     @IBOutlet weak var workoutImage: UIImageView!
     @IBOutlet weak var workoutName: UILabel!
     @IBOutlet weak var btnFinish: UIButton!
+    
+    var users = [NSManagedObject]()
     
     var workoutIndex: String!
     var imageIndex: UIImage!
@@ -38,6 +40,27 @@ class ContentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func btnAction(sender: AnyObject) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        if self.users.count > 0{
+            let user = self.users[0]
+            let updatedXP = user.valueForKey("experience") as? String
+            let xp = Int(updatedXP!)! + 1
+            print(String(xp))
+            user.setValue(String(xp), forKey: "experience")
+        }
+        
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
 
     /*
     // MARK: - Navigation
