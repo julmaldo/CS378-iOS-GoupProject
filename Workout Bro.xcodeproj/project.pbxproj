@@ -30,6 +30,7 @@
 		15D1D9DD1BF15B9D00D74AEB /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1D9DC1BF15B9D00D74AEB /* Workout.swift */; };
 		15DEF25C1BD99C670031515C /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DEF25B1BD99C670031515C /* WorkoutTableViewController.swift */; };
 		15DEF2601BD99D020031515C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DEF25F1BD99D020031515C /* DataModel.swift */; };
+		431801F61C0E6FBF00BD7BCD /* settings.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 431801F51C0E6FBF00BD7BCD /* settings.jpeg */; };
 		435F4DD51BDAF70700EE61CE /* Avatar1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 435F4DD11BDAF70700EE61CE /* Avatar1.jpg */; };
 		435F4DD61BDAF70700EE61CE /* Avatar2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 435F4DD21BDAF70700EE61CE /* Avatar2.jpg */; };
 		435F4DD71BDAF70700EE61CE /* Avatar3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 435F4DD31BDAF70700EE61CE /* Avatar3.jpg */; };
@@ -116,6 +117,7 @@
 		15D1D9DC1BF15B9D00D74AEB /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		15DEF25B1BD99C670031515C /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		15DEF25F1BD99D020031515C /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = ../DataModel.swift; sourceTree = "<group>"; };
+		431801F51C0E6FBF00BD7BCD /* settings.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpeg; sourceTree = "<group>"; };
 		435F4DD11BDAF70700EE61CE /* Avatar1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Avatar1.jpg; path = "../loadingBar 2/Avatar1.jpg"; sourceTree = "<group>"; };
 		435F4DD21BDAF70700EE61CE /* Avatar2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Avatar2.jpg; path = "../loadingBar 2/Avatar2.jpg"; sourceTree = "<group>"; };
 		435F4DD31BDAF70700EE61CE /* Avatar3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Avatar3.jpg; path = "../loadingBar 2/Avatar3.jpg"; sourceTree = "<group>"; };
@@ -220,6 +222,8 @@
 		439080121C0E5A61000B6E81 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				431801F51C0E6FBF00BD7BCD /* settings.jpeg */,
+				439080151C0E5B57000B6E81 /* weights.jpg */,
 			);
 			name = Backgrounds;
 			path = ..;
@@ -257,7 +261,6 @@
 		43AF4E891BCC8FE4003298DB = {
 			isa = PBXGroup;
 			children = (
-				439080151C0E5B57000B6E81 /* weights.jpg */,
 				43AF4E941BCC8FE4003298DB /* Workout Bro */,
 				43AF4EAC1BCC8FE4003298DB /* Workout BroTests */,
 				43AF4EB71BCC8FE4003298DB /* Workout BroUITests */,
@@ -450,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431801F61C0E6FBF00BD7BCD /* settings.jpeg in Resources */,
 				4392E7D31BD71BF100AE5D86 /* 03.jpg in Resources */,
 				1595D9E91BF2C78800F15462 /* Reverse Curls.png in Resources */,
 				4392E7E01BD71BF100AE5D86 /* 16.jpg in Resources */,

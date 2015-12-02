@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Bro" syncable="YES">
+        <attribute name="experience" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="User" syncable="YES">
         <attribute name="currentWeight" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="goalWeight" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,6 +12,7 @@
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Bro" positionX="-279" positionY="27" width="128" height="90"/>
         <element name="User" positionX="-281" positionY="-0" width="128" height="105"/>
     </elements>
 </model>

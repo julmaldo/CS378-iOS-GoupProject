@@ -40,10 +40,12 @@ class SetupViewController: UIViewController {
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var startingWeightTF: UITextField!
     @IBOutlet weak var goalWeightTF: UITextField!
+    @IBOutlet weak var broNameTF: UITextField!
 
     @IBAction func startPushed(sender: AnyObject) {
         let currentWeightTF = startingWeightTF.text!
         saveUser(currentWeightTF, goalWeight: goalWeightTF.text!, startingWeight: startingWeightTF.text!, userName:usernameTF.text! )
+        saveBro(broNameTF.text!)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -75,6 +77,36 @@ class SetupViewController: UIViewController {
         }
         
     }
+    func saveBro(broName: String) {
+        let level = "1"
+        let experience = "0"
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        // Create the entity we want to save
+        let entity =  NSEntityDescription.entityForName("Bro", inManagedObjectContext: managedContext)
+        
+        let user = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+        
+        // Set the attribute values
+        user.setValue(broName, forKey: "name")
+        user.setValue(level, forKey: "level")
+        user.setValue(experience, forKey: "experience")
+        
+        
+        // Commit the changes.
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+    }
+
 
     /*
     // MARK: - Navigation

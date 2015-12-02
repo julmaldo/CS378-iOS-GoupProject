@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentWeightLabel: UILabel!
     @IBOutlet weak var goalWeightLabel: UILabel!
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var broName: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var xpLabel: UILabel!
     
     var users = [NSManagedObject]()
     
@@ -51,7 +54,43 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        showUser()
+        showBro()
+    }
+    
+    func showBro(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName:"Bro")
+        
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        if let results = fetchedResults {
+            users = results
+        } else {
+            print("Could not fetch")
+        }
+        if users.count > 0{
+            let user = users[0]
+            broName.text = user.valueForKey("name") as? String
+            xpLabel.text = user.valueForKey("experience") as? String
+            levelLabel.text = user.valueForKey("level") as? String
+        }
+
+    }
+    
+    func showUser() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
@@ -81,7 +120,6 @@ class ViewController: UIViewController {
             userName.text = user.valueForKey("userName") as? String
         }
     }
-    
     //alert to update weight, waiting for complete data model to update
     @IBAction func userUpdateWeight(sender: AnyObject) {
         
