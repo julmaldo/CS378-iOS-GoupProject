@@ -11,7 +11,7 @@ import UIKit
 
 @IBDesignable class experienceBarView: UIView {
 
-    @IBInspectable var counterTotal: Int = NoOfGlasses
+    @IBInspectable var experienceTotal: Int = NoOfGlasses
     @IBInspectable var counter: Int = 0 {
         didSet {
             if counter <=  NoOfGlasses {

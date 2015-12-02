@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var xpLabel: UILabel!
     
     var users = [NSManagedObject]()
-    
+    var bros = [NSManagedObject]()
+
     var alertController:UIAlertController? = nil
     var userWeightTextField: UITextField? = nil
     
@@ -79,15 +80,15 @@ class ViewController: UIViewController {
         }
         
         if let results = fetchedResults {
-            users = results
+            bros = results
         } else {
             print("Could not fetch")
         }
-        if users.count > 0{
-            let user = users[0]
-            broName.text = user.valueForKey("name") as? String
-            xpLabel.text = user.valueForKey("experience") as? String
-            levelLabel.text = user.valueForKey("level") as? String
+        if bros.count > 0{
+            let bro = bros[0]
+            broName.text = bro.valueForKey("name") as? String
+            xpLabel.text = bro.valueForKey("experience") as? String
+            levelLabel.text = bro.valueForKey("level") as? String
         }
 
     }
