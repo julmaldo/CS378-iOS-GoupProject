@@ -29,6 +29,7 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = true
         self.workoutButton.layer.cornerRadius = 10.0
         let firstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
        
@@ -54,6 +55,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
         showUser()
         showBro()
     }
