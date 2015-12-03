@@ -52,14 +52,6 @@ class ViewController: UIViewController {
         
 
         //loadLevel()
-        //animations
-        for i in 1...4{
-            let imageName = "Avatar\(i).jpg"
-            imageList.append(UIImage(named: imageName)!)
-        }
-        
-        startAnimation()
-    
     }
     
     
@@ -71,6 +63,23 @@ class ViewController: UIViewController {
         progressView.transform = CGAffineTransformMakeScale(1.0, 5.0);
         showBro()
         increaseXp()
+        for i in 1...2{
+            let xp = Int(xpLabel.text!)!
+            var level:Int
+            if xp < 3 {
+                level = 1
+            }else
+                if xp < 9{
+                    level = 2
+                }else
+                {
+                    level = 3
+            }
+            let imageName = "Avatar\(level)\(i).jpg"
+            imageList.append(UIImage(named: imageName)!)
+        }
+        
+        startAnimation()
     }
     
     
@@ -267,7 +276,7 @@ class ViewController: UIViewController {
     
     func startAnimation(){
         myImageView.animationImages = imageList
-        myImageView.animationDuration = 2
+        myImageView.animationDuration = 1
         myImageView.startAnimating()
     }
 }
