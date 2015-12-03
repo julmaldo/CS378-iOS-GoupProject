@@ -26,7 +26,6 @@ class ContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         self.workoutName.text = self.workoutIndex
         self.workoutImage.image = self.imageIndex
@@ -83,7 +82,11 @@ class ContentViewController: UIViewController {
         
         if let lastPushed = myDate {
             let dateNow = NSDate()
-            let secondsInDay:NSTimeInterval = 3600 * 25
+            let lastPush = NSUserDefaults.standardUserDefaults().objectForKey("lastPush") as? NSTimeInterval
+            let secondsInDay:NSTimeInterval = 60 * 5
+            
+            print(lastPush)
+            print(dateNow.timeIntervalSinceDate(lastPushed))
             
             if dateNow.timeIntervalSinceDate(lastPushed) >= secondsInDay{
                 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -109,8 +112,10 @@ class ContentViewController: UIViewController {
         }
         else{
             let currentDate = NSDate()
+            let date = NSDate()
             
             NSUserDefaults.standardUserDefaults().setObject(currentDate, forKey: "myDate")
+            NSUserDefaults.standardUserDefaults().setObject(date.timeIntervalSinceDate(currentDate), forKey: "lastPush")
             NSUserDefaults.standardUserDefaults().synchronize()
             
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -132,7 +137,7 @@ class ContentViewController: UIViewController {
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
                 abort()
             }
-
+            
         }
     }
 
