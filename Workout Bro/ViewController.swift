@@ -65,7 +65,7 @@ class ViewController: UIViewController {
         increaseXp()
         updateWeightProgress()
         
-        for i in 1...2{
+        
             let xp = Int(xpLabel.text!)!
             var level:Int
             var status:String
@@ -85,9 +85,9 @@ class ViewController: UIViewController {
                 congrats(status)
                 imageList.removeAll()
                 updateLevel(level)
-                
             }
             statusLabel.text = status
+        for i in 1...2{
             let imageName = "Avatar\(level)\(i).jpg"
             imageList.append(UIImage(named: imageName)!)
         }
@@ -307,5 +307,6 @@ class ViewController: UIViewController {
         myImageView.animationImages = imageList
         myImageView.animationDuration = 2
         myImageView.startAnimating()
+        print("NUM IMAGES: \(myImageView.animationImages?.count)")
     }
 }
