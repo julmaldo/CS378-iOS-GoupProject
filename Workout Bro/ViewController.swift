@@ -53,14 +53,6 @@ class ViewController: UIViewController {
         
 
         //loadLevel()
-        //animations
-        for i in 1...4{
-            let imageName = "Avatar\(i).jpg"
-            imageList.append(UIImage(named: imageName)!)
-        }
-        
-        startAnimation()
-    
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -251,7 +243,7 @@ class ViewController: UIViewController {
     
     func startAnimation(){
         myImageView.animationImages = imageList
-        myImageView.animationDuration = 2
+        myImageView.animationDuration = 1
         myImageView.startAnimating()
     }
 }

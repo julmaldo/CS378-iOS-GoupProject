@@ -23,7 +23,7 @@ class SetupViewController: UIViewController {
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.alertBody = "Remember to update your current weight."
         notification.timeZone = NSTimeZone.localTimeZone()
-        notification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        notification.fireDate = NSDate(timeIntervalSinceNow: 30)
         notification.repeatInterval = NSCalendarUnit.Month
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
