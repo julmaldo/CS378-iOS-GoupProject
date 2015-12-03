@@ -65,6 +65,24 @@ class ViewController: UIViewController {
         showBro()
         increaseXp()
         updateWeightProgress()
+        
+        for i in 1...2{
+            let xp = Int(xpLabel.text!)!
+            var level:Int
+            if xp < 3 {
+                level = 1
+            }else
+                if xp < 9{
+                    level = 2
+                }else
+                {
+                    level = 3
+            }
+            let imageName = "Avatar\(level)\(i).jpg"
+            imageList.append(UIImage(named: imageName)!)
+        }
+        
+        startAnimation()
     }
     
     func updateWeightProgress(){
