@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var xpBarView: experienceBarView!
     var lastXp:Int = 2
     var counter:float_t = 0
-    
+    var startingWeight:String = ""
     var users = [NSManagedObject]()
     var bros = [NSManagedObject]()
 
@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
     
+    @IBOutlet weak var weightProgressBar: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
         progressView?.progress = 0.33
@@ -62,40 +63,27 @@ class ViewController: UIViewController {
     
     }
     
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
         showUser()
         //updateProgress()
         progressView.transform = CGAffineTransformMakeScale(1.0, 5.0);
+        weightProgressBar.transform = CGAffineTransformMakeScale(1.0, 5.0);
         showBro()
         increaseXp()
+        updateWeightProgress()
     }
     
-    
-    
-    func setLevel(){
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        
-        if self.bros.count > 0{
-            let user = self.bros[0]
-            user.setValue(String(xpBarView.counterTotal + 1), forKey: "level")
-        }
-        
-        // Commit the changes.
-        do {
-            try managedContext.save()
-        } catch {
-            // what to do if an error occurs?
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
-
+    func updateWeightProgress(){
+        let start = float_t(startingWeight)
+        let current = float_t(currentWeightLabel.text!)
+        let goal = float_t(goalWeightLabel.text!)
+        let percent = (start! - current!)/(start! - goal!)
+        weightProgressBar?.progress = percent
     }
-    func updateProgress(counter:float_t,var level:Int){
+    
+    func updateProgress(counter:float_t,let level:Int){
         let dom:float_t
         if level == 1{
             dom = 3.0
@@ -124,19 +112,14 @@ class ViewController: UIViewController {
         var counter:Int
         if xp <= 2{
             counter = xp
-            //progressView?.progress = float_t(xp/3)
         } else if xp <= 8{
-            let x = (level - 1) * 3
-        counter = xp - ((level - 1) * 3)
-        //progressView?.progress = float_t((xp - x) / x)
+            counter = xp - ((level - 1) * 3)
         }else{
             counter = xp - (level * 3)
         }
         if xp >= 18{
             counter = 9
         }
-        //xpBarView.counterTotal = level
-        //xpBarView.counter = counter
         updateProgress(float_t(counter), level: level)
         levelLabel.text = String(level)
     }
@@ -229,6 +212,7 @@ class ViewController: UIViewController {
             currentWeightLabel.text = user.valueForKey("currentWeight") as? String
             goalWeightLabel.text = user.valueForKey("goalWeight") as? String
             userName.text = user.valueForKey("userName") as? String
+            startingWeight = user.valueForKey("startWeight") as! String!
         }
     }
     //alert to update weight, waiting for complete data model to update
