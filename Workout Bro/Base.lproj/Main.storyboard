@@ -917,6 +917,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="btnFinish" destination="8fj-zl-f6M" id="gKx-u9-Y9Q"/>
+                        <outlet property="recLbl" destination="2jy-Ln-pL8" id="Y3p-O5-CB4"/>
                         <outlet property="recWeight" destination="aUs-tx-a6O" id="03Q-g0-ff9"/>
                         <outlet property="workoutImage" destination="Y5Y-M8-m0e" id="bB7-CG-2J3"/>
                         <outlet property="workoutName" destination="CzZ-Ae-FKH" id="4Ar-uS-QRz"/>
@@ -924,7 +925,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pr-m0-9p0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2994.5" y="1588.5"/>
+            <point key="canvasLocation" x="3020.5" y="1568.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g6X-z4-LDa">

@@ -14,6 +14,7 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var workoutImage: UIImageView!
     @IBOutlet weak var workoutName: UILabel!
     @IBOutlet weak var btnFinish: UIButton!
+    @IBOutlet weak var recLbl: UILabel!
     
     var users = [NSManagedObject]()
     
@@ -33,6 +34,7 @@ class ContentViewController: UIViewController {
         if(!btnVis){
             btnFinish.hidden = true;
         }
+        workoutCheck()
         showUser()
     }
     
@@ -61,30 +63,76 @@ class ContentViewController: UIViewController {
         }
     
     }
+    
+    func workoutCheck(){
+        if (self.workoutIndex == "Squats" || self.workoutIndex == "Crunches" || self.workoutIndex == "Sit-ups"){
+            recLbl.text = "Recommended Start Reps:"
+        }
+        else if (self.workoutIndex == "Planks"){
+            recLbl.text = "Recommended Start Duration:"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func btnAction(sender: AnyObject) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
+        let myDate = NSUserDefaults.standardUserDefaults().objectForKey("myDate") as? NSDate
         
-        if self.users.count > 0{
-            let user = self.users[0]
-            let updatedXP = user.valueForKey("experience") as? String
-            let xp = Int(updatedXP!)! + 1
-            print(String(xp))
-            user.setValue(String(xp), forKey: "experience")
+        if let lastPushed = myDate {
+            let dateNow = NSDate()
+            let secondsInDay:NSTimeInterval = 3600 * 25
+            
+            if dateNow.timeIntervalSinceDate(lastPushed) >= secondsInDay{
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                let managedContext = appDelegate.managedObjectContext
+                
+                if self.users.count > 0{
+                    let user = self.users[0]
+                    let updatedXP = user.valueForKey("experience") as? String
+                    let xp = Int(updatedXP!)! + 1
+                    print(String(xp))
+                    user.setValue(String(xp), forKey: "experience")
+                }
+                
+                do {
+                    try managedContext.save()
+                } catch {
+                    // what to do if an error occurs?
+                    let nserror = error as NSError
+                    NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                    abort()
+                }
+            }
         }
-        
-        do {
-            try managedContext.save()
-        } catch {
-            // what to do if an error occurs?
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
+        else{
+            let currentDate = NSDate()
+            
+            NSUserDefaults.standardUserDefaults().setObject(currentDate, forKey: "myDate")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            
+            if self.users.count > 0{
+                let user = self.users[0]
+                let updatedXP = user.valueForKey("experience") as? String
+                let xp = Int(updatedXP!)! + 1
+                print(String(xp))
+                user.setValue(String(xp), forKey: "experience")
+            }
+            
+            do {
+                try managedContext.save()
+            } catch {
+                // what to do if an error occurs?
+                let nserror = error as NSError
+                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                abort()
+            }
+
         }
     }
 

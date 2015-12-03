@@ -39,13 +39,13 @@ class DataModel {
         workoutExercises[3].append(Workout(exercise: "Dumbbell Shrug", guide: UIImage(named: "Dumbbell Shrug")!, weight: "10 lbs"))
         workoutExercises[3].append(Workout(exercise: "Dumbbell Deadlift", guide: UIImage(named: "Deadlift")!, weight: "10 lbs"))
         
-        workoutExercises[4].append(Workout(exercise: "Squats", guide: UIImage(named: "Squats")!, weight: "no weight"))
-        workoutExercises[4].append(Workout(exercise: "Lunges", guide: UIImage(named: "Lunges")!, weight: "no weight"))
+        workoutExercises[4].append(Workout(exercise: "Squats", guide: UIImage(named: "Squats")!, weight: "10 reps"))
+        workoutExercises[4].append(Workout(exercise: "Lunges", guide: UIImage(named: "Lunges")!, weight: "10 lbs"))
         workoutExercises[4].append(Workout(exercise: "Calf Raises", guide: UIImage(named: "Calf Raises")!, weight: "10 lbs"))
         
         workoutExercises[5].append(Workout(exercise: "Planks", guide: UIImage(named: "Planks")!, weight: "60 seconds"))
-        workoutExercises[5].append(Workout(exercise: "Crunches", guide: UIImage(named: "Crunches")!, weight: "no weight"))
-        workoutExercises[5].append(Workout(exercise: "Sit-ups", guide: UIImage(named: "Sit Ups")!, weight: "no weight"))
+        workoutExercises[5].append(Workout(exercise: "Crunches", guide: UIImage(named: "Crunches")!, weight: "10 reps"))
+        workoutExercises[5].append(Workout(exercise: "Sit-ups", guide: UIImage(named: "Sit Ups")!, weight: "10 reps"))
     }
     
     func count() -> Int{
