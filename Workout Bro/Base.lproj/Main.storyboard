@@ -321,14 +321,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-Bq-FnF">
-                                        <rect key="frame" x="197" y="228" width="85" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="notifications"/>
-                                        <connections>
-                                            <segue destination="cMS-dH-rra" kind="show" id="CMr-v6-z3k"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKb-7e-bZQ">
                                         <rect key="frame" x="112" y="175" width="150" height="40"/>
                                         <animations/>
@@ -350,6 +342,14 @@
                                         </state>
                                         <connections>
                                             <segue destination="fE6-lm-VTO" kind="presentation" id="Rgd-Ou-uwP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-Bq-FnF">
+                                        <rect key="frame" x="253" y="223" width="85" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="notifications"/>
+                                        <connections>
+                                            <segue destination="cMS-dH-rra" kind="presentation" id="VmF-cw-46G"/>
                                         </connections>
                                     </button>
                                 </subviews>
