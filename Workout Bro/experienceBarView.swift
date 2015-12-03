@@ -7,20 +7,54 @@
 //
 
 import UIKit
+import CoreData
 
 
 @IBDesignable class experienceBarView: UIView {
 
-    @IBInspectable var counterTotal: Int = NoOfGlasses
+    //@IBInspectable var level = 1
+    var z = 1
+    var bros = [NSManagedObject]()
+    @IBInspectable var counterTotal: Int = 5
     @IBInspectable var counter: Int = 0 {
         didSet {
-            if counter <=  NoOfGlasses {
+            if z > -1 {
                 setNeedsDisplay()
             }
         }
     }
     @IBInspectable var outlineColor: UIColor = UIColor.blueColor()
     @IBInspectable var counterColor: UIColor = UIColor.orangeColor()
+    
+    
+    func loadLevel(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName:"Bro")
+        
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        if let results = fetchedResults {
+            bros = results
+        } else {
+            print("Could not fetch")
+        }
+        if bros.count > 0{
+            let bro = bros[0]
+            counterTotal = Int(bro.valueForKey("experience") as! String)!
+        }
+    }
     
     override func drawRect(rect: CGRect) {
         
@@ -43,7 +77,7 @@ import UIKit
         
         let angleDifference: CGFloat = 2 * π - startAngle + endAngle
         
-        let arcLengthPerGlass = angleDifference / CGFloat(NoOfGlasses)
+        let arcLengthPerGlass = angleDifference / CGFloat(counterTotal * 3)
         
         let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
         

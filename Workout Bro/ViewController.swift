@@ -19,9 +19,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var broName: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var xpLabel: UILabel!
+    @IBOutlet weak var xpBarView: experienceBarView!
+    var lastXp:Int = 2
     
     var users = [NSManagedObject]()
-    
+    var bros = [NSManagedObject]()
+
     var alertController:UIAlertController? = nil
     var userWeightTextField: UITextField? = nil
     
@@ -32,17 +35,19 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBarHidden = true
         self.workoutButton.layer.cornerRadius = 10.0
         let firstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
-       
+        
         if firstLaunch  {
             print("Not first launch.")
         }
-            
         else {
             print("First launch, setting NSUserDefault.")
+            //lastXp = 0
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
             self.performSegueWithIdentifier("setup", sender: nil)
         }
         
+
+        //loadLevel()
         //animations
         for i in 1...4{
             let imageName = "Avatar\(i).jpg"
@@ -53,11 +58,99 @@ class ViewController: UIViewController {
     
     }
     
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
         showUser()
+        //setLevel()
         showBro()
+        //if lastXp == 0{
+        //    xpBarView.counterTotal = 1
+        //}
+        //let tmp = Int(xpLabel.text!)!
+        
+        increaseXp()
+    }
+    
+    
+    
+    func setLevel(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        if self.bros.count > 0{
+            let user = self.bros[0]
+            user.setValue(String(xpBarView.counterTotal + 1), forKey: "level")
+        }
+        
+        // Commit the changes.
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+
+    }
+    
+    func increaseXp(){
+        let xp = Int(xpLabel.text!)!
+        var level:Int
+        if xp < 3 {
+            level = 1
+        }else
+            if xp < 9{
+            level = 2
+        }else
+            {
+            level = 3
+        }
+        var counter:Int
+        if xp <= 2{
+            counter = xp
+        } else if xp <= 8{
+        counter = xp - ((level - 1) * 3)
+        }else{
+            counter = xp - (level * 3)
+        }
+        if xp >= 18{
+            counter = 9
+        }
+        xpBarView.counterTotal = level
+        xpBarView.counter = counter
+        levelLabel.text = String(level)
+    }
+    
+    func loadLevel(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName:"Bro")
+        
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        if let results = fetchedResults {
+            bros = results
+        } else {
+            print("Could not fetch")
+        }
+        if bros.count > 0{
+            let bro = bros[0]
+            xpBarView.counterTotal = Int(bro.valueForKey("experience") as! String)!
+        }
     }
     
     func showBro(){
@@ -79,17 +172,16 @@ class ViewController: UIViewController {
         }
         
         if let results = fetchedResults {
-            users = results
+            bros = results
         } else {
             print("Could not fetch")
         }
-        if users.count > 0{
-            let user = users[0]
-            broName.text = user.valueForKey("name") as? String
-            xpLabel.text = user.valueForKey("experience") as? String
-            levelLabel.text = user.valueForKey("level") as? String
+        if bros.count > 0{
+            let bro = bros[0]
+            broName.text = bro.valueForKey("name") as? String
+            xpLabel.text = bro.valueForKey("experience") as? String
+            levelLabel.text = bro.valueForKey("level") as? String
         }
-
     }
     
     func showUser() {
