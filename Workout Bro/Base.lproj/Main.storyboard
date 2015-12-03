@@ -415,6 +415,10 @@
                                             <segue destination="TNq-os-xdb" kind="show" id="cVF-cP-sHc"/>
                                         </connections>
                                     </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PQL-GM-K5K">
+                                        <rect key="frame" x="72" y="83" width="220" height="2"/>
+                                        <animations/>
+                                    </progressView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.99375382449266014" green="1" blue="0.8306121816154789" alpha="1" colorSpace="calibratedRGB"/>
@@ -436,7 +440,7 @@
                         <outlet property="myImageView" destination="pIL-kY-Yv3" id="m5r-5P-vbA"/>
                         <outlet property="progressView" destination="ks1-vX-NvG" id="GtY-Ca-0JA"/>
                         <outlet property="userName" destination="eMo-UK-2Jj" id="YFu-5P-L87"/>
-                        <outlet property="weightProgressBar" destination="YIe-bm-XE9" id="FuX-CM-ajq"/>
+                        <outlet property="weightProgressBar" destination="PQL-GM-K5K" id="5cy-PP-waU"/>
                         <outlet property="workoutButton" destination="FKb-7e-bZQ" id="q9t-aZ-Nsi"/>
                         <outlet property="xpBarView" destination="JcH-me-0Sj" id="lTj-aC-5e4"/>
                         <outlet property="xpLabel" destination="rpL-eJ-tUi" id="wLl-a6-NZ5"/>
