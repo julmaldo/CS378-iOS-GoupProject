@@ -82,65 +82,47 @@ class ContentViewController: UIViewController {
         
         if let lastPushed = myDate {
             let dateNow = NSDate()
-            let lastPush = NSUserDefaults.standardUserDefaults().objectForKey("lastPush") as? NSTimeInterval
-            let secondsInDay:NSTimeInterval = 60 * 5
-            
-            print(lastPush)
+            let secondsInDay:NSTimeInterval = 30
             print(dateNow.timeIntervalSinceDate(lastPushed))
             
             if dateNow.timeIntervalSinceDate(lastPushed) >= secondsInDay{
-                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                let managedContext = appDelegate.managedObjectContext
+                NSUserDefaults.standardUserDefaults().setObject(dateNow, forKey: "myDate")
+                NSUserDefaults.standardUserDefaults().synchronize()
                 
-                if self.users.count > 0{
-                    let user = self.users[0]
-                    let updatedXP = user.valueForKey("experience") as? String
-                    let xp = Int(updatedXP!)! + 1
-                    print(String(xp))
-                    user.setValue(String(xp), forKey: "experience")
-                }
-                
-                do {
-                    try managedContext.save()
-                } catch {
-                    // what to do if an error occurs?
-                    let nserror = error as NSError
-                    NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                    abort()
-                }
+                addXP()
             }
         }
         else{
             let currentDate = NSDate()
-            let date = NSDate()
             
             NSUserDefaults.standardUserDefaults().setObject(currentDate, forKey: "myDate")
-            NSUserDefaults.standardUserDefaults().setObject(date.timeIntervalSinceDate(currentDate), forKey: "lastPush")
             NSUserDefaults.standardUserDefaults().synchronize()
             
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            let managedContext = appDelegate.managedObjectContext
-            
-            if self.users.count > 0{
-                let user = self.users[0]
-                let updatedXP = user.valueForKey("experience") as? String
-                let xp = Int(updatedXP!)! + 1
-                print(String(xp))
-                user.setValue(String(xp), forKey: "experience")
-            }
-            
-            do {
-                try managedContext.save()
-            } catch {
-                // what to do if an error occurs?
-                let nserror = error as NSError
-                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                abort()
-            }
-            
+            addXP()
         }
     }
 
+    func addXP(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        if self.users.count > 0{
+            let user = self.users[0]
+            let xp = user.valueForKey("experience") as? String
+            let updatedXP = Int(xp!)! + 1
+            print(String(updatedXP))
+            user.setValue(String(updatedXP), forKey: "experience")
+        }
+        
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
     /*
     // MARK: - Navigation
 
