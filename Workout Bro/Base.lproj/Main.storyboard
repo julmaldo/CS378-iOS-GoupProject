@@ -117,7 +117,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWA-Tt-eJT">
                                 <rect key="frame" x="20" y="620" width="375" height="20"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.2509698275862069" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -345,16 +345,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k22-j4-hGa">
-                                        <rect key="frame" x="167" y="279" width="91" height="29"/>
-                                        <animations/>
-                                        <state key="normal" title="Settings" image="settings.jpeg" backgroundImage="settings.jpeg">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="fE6-lm-VTO" kind="presentation" id="Rgd-Ou-uwP"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-Bq-FnF">
                                         <rect key="frame" x="137" y="227" width="150" height="40"/>
                                         <animations/>
@@ -390,6 +380,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="TNq-os-xdb" kind="show" id="cVF-cP-sHc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k22-j4-hGa">
+                                        <rect key="frame" x="132" y="275" width="161" height="40"/>
+                                        <animations/>
+                                        <state key="normal" backgroundImage="settings.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="fE6-lm-VTO" kind="presentation" id="Rgd-Ou-uwP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -533,7 +533,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLu-lG-hm7">
                                 <rect key="frame" x="20" y="623" width="375" height="20"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25096982759999997" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -605,7 +604,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOx-Yj-8ls">
                                 <rect key="frame" x="20" y="621" width="375" height="20"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25096982759999997" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -678,10 +676,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.masksToBounds">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="updateName:" destination="fE6-lm-VTO" eventType="touchUpInside" id="7bg-ud-CiP"/>
@@ -724,10 +722,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.masksToBounds">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="updateStart:" destination="fE6-lm-VTO" eventType="touchUpInside" id="ZIi-wl-atW"/>
@@ -741,10 +739,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.masksToBounds">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="updateCurrent:" destination="fE6-lm-VTO" eventType="touchUpInside" id="VNF-Uh-jB2"/>
@@ -765,10 +763,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.cornerRadius" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.masksToBounds">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="updateGoal:" destination="fE6-lm-VTO" eventType="touchUpInside" id="Eps-Mg-xsY"/>
@@ -777,7 +775,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4O-PQ-qnC">
                                 <rect key="frame" x="20" y="625" width="375" height="20"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25096982759999997" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1012,7 +1010,7 @@
     </scenes>
     <resources>
         <image name="Avatar11.jpg" width="326" height="269"/>
-        <image name="settings.jpeg" width="1080" height="332"/>
+        <image name="settings.png" width="1080" height="278"/>
         <image name="weights.jpg" width="255" height="450"/>
     </resources>
 </document>

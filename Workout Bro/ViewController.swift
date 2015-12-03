@@ -41,7 +41,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
-        self.workoutButton.layer.cornerRadius = 10.0
         let firstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
         
         if firstLaunch  {
@@ -76,25 +75,17 @@ class ViewController: UIViewController {
             }else
                 if xp < 9{
                     level = 2
-                    status = "Adept"
+                    status = "Gym Rat"
                 }else
                 {
-                    status = "Master"
+                    status = "Gym Master"
                     level = 3
             }
             if lastLevel != level{
-                
-                self.alertController = UIAlertController(title: "XP Gained!", message: "Congratulations! You evolved into a Workout \(status)!", preferredStyle: UIAlertControllerStyle.Alert)
-                
-                let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel) { (action) -> Void in
-                }
-                
-                self.alertController!.addAction(ok)
-                
-                presentViewController(self.alertController!, animated: true, completion: nil)
-
+                congrats(status)
                 imageList.removeAll()
                 updateLevel(level)
+                
             }
             statusLabel.text = status
             let imageName = "Avatar\(level)\(i).jpg"
@@ -102,6 +93,17 @@ class ViewController: UIViewController {
         }
         
         startAnimation()
+    }
+    
+    func congrats(status:String){
+        self.alertController = UIAlertController(title: "XP Gained!", message: "Congratulations! You evolved into a  \(status)!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+        }
+        
+        self.alertController!.addAction(ok)
+        
+        presentViewController(self.alertController!, animated: true, completion: nil)
     }
     
     func updateWeightProgress(){
@@ -118,6 +120,9 @@ class ViewController: UIViewController {
             goal = 0
         }
         let percent = (start! - current!)/(start! - goal!)
+        if (percent) >= 1.0{
+            userUpdateGoal()
+        }
         weightProgressBar?.progress = percent
     }
     
@@ -247,16 +252,34 @@ class ViewController: UIViewController {
         }
     }
     //alert to update weight, waiting for complete data model to update
-    @IBAction func userUpdateWeight(sender: AnyObject) {
+    func userUpdateGoal() {
+        self.alertController = UIAlertController(title: "Update Goal Weight", message: "Fantastic! You made your goal! What would you like your new goal to be?", preferredStyle: UIAlertControllerStyle.Alert)
         
-        self.alertController = UIAlertController(title: "Update Body Weight", message: "How much do you currently weight?", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let ok = UIAlertAction(title: "Update", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            self.updateCurrentWeight(self.userWeightTextField!.text!)
-            //print("You entered \(self.userWeightTextField!.text!)")
+        let ok = UIAlertAction(title: "Update Goal", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            
+            if self.users.count > 0{
+                let user = self.users[0]
+                user.setValue(self.userWeightTextField!.text!, forKey: "goalWeight")
+                user.setValue(self.currentWeightLabel.text!, forKey: "startWeight")
+                user.setValue(self.currentWeightLabel.text!, forKey: "currentWeight")
+            }
+            
+            // Commit the changes.
+            do {
+                try managedContext.save()
+            } catch {
+                // what to do if an error occurs?
+                let nserror = error as NSError
+                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                abort()
+            }
+            self.showUser()
+            self.updateWeightProgress()
         })
         
-        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+        let cancel = UIAlertAction(title: "Keep Goal", style: UIAlertActionStyle.Cancel) { (action) -> Void in
         }
         
         self.alertController!.addAction(ok)
@@ -264,7 +287,7 @@ class ViewController: UIViewController {
         
         self.alertController!.addTextFieldWithConfigurationHandler { (textField) -> Void in
             self.userWeightTextField = textField
-            self.userWeightTextField?.placeholder = "Enter your current weight"
+            self.userWeightTextField?.placeholder = "Enter a goal weight."
         }
         
         presentViewController(self.alertController!, animated: true, completion: nil)

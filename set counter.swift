@@ -49,7 +49,7 @@ class set_counter: UIViewController {
             dismissViewControllerAnimated(true, completion: nil)
         }
         counterLabel.text = String(counterView.counter)
-        if(idx != 9){
+        if(idx != 4){
             currSet.setTitle("Do Set " + idx.description, forState: .Normal)
         }
         else{
