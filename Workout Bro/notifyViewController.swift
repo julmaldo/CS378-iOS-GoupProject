@@ -36,11 +36,17 @@ class notifyViewController: UIViewController {
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
         //END
     }
+    
+    @IBAction func exitPushed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     
 }
