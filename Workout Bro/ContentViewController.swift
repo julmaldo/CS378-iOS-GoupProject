@@ -18,6 +18,8 @@ class ContentViewController: UIViewController {
     
     var users = [NSManagedObject]()
     
+    var alertController:UIAlertController? = nil
+    
     var workoutIndex: String!
     var imageIndex: UIImage!
     var weightIndex: String!
@@ -90,6 +92,25 @@ class ContentViewController: UIViewController {
                 NSUserDefaults.standardUserDefaults().synchronize()
                 
                 addXP()
+                
+                self.alertController = UIAlertController(title: "XP Gained!", message: "Congratulations! You gained a point of XP!", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+                }
+                
+                self.alertController!.addAction(ok)
+                
+                presentViewController(self.alertController!, animated: true, completion: nil)
+            }
+            else{
+                self.alertController = UIAlertController(title: "Chill Out!", message: "You can't say you did this workout yet...", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+                }
+                
+                self.alertController!.addAction(ok)
+                
+                presentViewController(self.alertController!, animated: true, completion: nil)
             }
         }
         else{
@@ -99,6 +120,14 @@ class ContentViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().synchronize()
             
             addXP()
+            self.alertController = UIAlertController(title: "XP Gained", message: "Congratulations! You gained a point of XP!", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+            }
+            
+            self.alertController!.addAction(ok)
+            
+            presentViewController(self.alertController!, animated: true, completion: nil)
         }
     }
 
