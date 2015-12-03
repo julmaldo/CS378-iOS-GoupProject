@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 import CoreData
 
 class SetupViewController: UIViewController {
@@ -17,8 +18,15 @@ class SetupViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //EM: notify user monthly to update weight 
-        let notificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-        UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        let notification:UILocalNotification = UILocalNotification()
+        
+        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.alertBody = "Remember to update your current weight."
+        notification.timeZone = NSTimeZone.localTimeZone()
+        notification.fireDate = NSDate(timeIntervalSinceNow: 5)
+        notification.repeatInterval = NSCalendarUnit.Month
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
         let pageController = UIPageControl.appearance()
         pageController.pageIndicatorTintColor = UIColor.lightGrayColor()
