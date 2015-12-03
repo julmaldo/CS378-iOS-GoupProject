@@ -84,7 +84,7 @@ class ContentViewController: UIViewController {
         
         if let lastPushed = myDate {
             let dateNow = NSDate()
-            let secondsInDay:NSTimeInterval = 30
+            let secondsInDay:NSTimeInterval = 1
             print(dateNow.timeIntervalSinceDate(lastPushed))
             
             if dateNow.timeIntervalSinceDate(lastPushed) >= secondsInDay{

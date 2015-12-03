@@ -37,7 +37,6 @@
 		15E7194E1C0FF801008A7B63 /* Avatar31.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 15E719481C0FF801008A7B63 /* Avatar31.jpg */; };
 		15E7194F1C0FF801008A7B63 /* Avatar32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 15E719491C0FF801008A7B63 /* Avatar32.jpg */; };
 		431801F61C0E6FBF00BD7BCD /* settings.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 431801F51C0E6FBF00BD7BCD /* settings.jpeg */; };
-		432FF98B1C0E89B10075F652 /* experienceBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432FF98A1C0E89B10075F652 /* experienceBarView.swift */; };
 		435F4DD51BDAF70700EE61CE /* Avatar1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 435F4DD11BDAF70700EE61CE /* Avatar1.jpg */; };
 		435F4DD61BDAF70700EE61CE /* Avatar2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 435F4DD21BDAF70700EE61CE /* Avatar2.jpg */; };
 		435F4DD71BDAF70700EE61CE /* Avatar3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 435F4DD31BDAF70700EE61CE /* Avatar3.jpg */; };
@@ -131,7 +130,6 @@
 		15E719481C0FF801008A7B63 /* Avatar31.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avatar31.jpg; sourceTree = SOURCE_ROOT; };
 		15E719491C0FF801008A7B63 /* Avatar32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Avatar32.jpg; sourceTree = SOURCE_ROOT; };
 		431801F51C0E6FBF00BD7BCD /* settings.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpeg; sourceTree = "<group>"; };
-		432FF98A1C0E89B10075F652 /* experienceBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = experienceBarView.swift; sourceTree = "<group>"; };
 		435F4DD11BDAF70700EE61CE /* Avatar1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Avatar1.jpg; path = "../loadingBar 2/Avatar1.jpg"; sourceTree = "<group>"; };
 		435F4DD21BDAF70700EE61CE /* Avatar2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Avatar2.jpg; path = "../loadingBar 2/Avatar2.jpg"; sourceTree = "<group>"; };
 		435F4DD31BDAF70700EE61CE /* Avatar3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Avatar3.jpg; path = "../loadingBar 2/Avatar3.jpg"; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 				43AF4E951BCC8FE4003298DB /* AppDelegate.swift */,
 				15DEF25F1BD99D020031515C /* DataModel.swift */,
 				43AF4E971BCC8FE4003298DB /* ViewController.swift */,
-				432FF98A1C0E89B10075F652 /* experienceBarView.swift */,
 				43E8D48F1BEBEA2500684DDA /* set counter.swift */,
 				43E8D4911BEBEB0500684DDA /* CounterView.swift */,
 				43A099561BED3315004EC864 /* SettingsViewController.swift */,
@@ -568,7 +565,6 @@
 				15DEF2601BD99D020031515C /* DataModel.swift in Sources */,
 				43E8D4921BEBEB0500684DDA /* CounterView.swift in Sources */,
 				4A22F5531C0986CA00B5924C /* notifyViewController.swift in Sources */,
-				432FF98B1C0E89B10075F652 /* experienceBarView.swift in Sources */,
 				43A099571BED3315004EC864 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
