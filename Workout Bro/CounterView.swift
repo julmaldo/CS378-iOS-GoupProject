@@ -1,6 +1,6 @@
 import UIKit
 
-let NoOfGlasses = 8
+let NoOfGlasses = 3
 let π:CGFloat = CGFloat(M_PI)
 
 @IBDesignable class CounterView: UIView {

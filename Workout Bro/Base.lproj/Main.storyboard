@@ -279,14 +279,14 @@
                                 <color key="progressTintColor" red="0.2530278847866998" green="0.34277425771882752" blue="0.6164970012626263" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40G-hj-D7e">
-                                <rect key="frame" x="218" y="246" width="42" height="21"/>
+                                <rect key="frame" x="167" y="246" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lvl:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47J-3u-oRs">
-                                <rect key="frame" x="172" y="246" width="26" height="21"/>
+                                <rect key="frame" x="121" y="246" width="26" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -299,23 +299,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-kY-Yv3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar11.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-kY-Yv3">
                                 <rect key="frame" x="121" y="67" width="172" height="164"/>
                                 <animations/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JcH-me-0Sj" customClass="experienceBarView" customModule="Workout_Bro" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="373" width="375" height="91"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24531249999999999" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
-                                        <color key="value" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2j-XM-c8N">
                                 <rect key="frame" x="0.0" y="350" width="414" height="386"/>
                                 <subviews>
@@ -423,6 +410,20 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrQ-aE-4hw">
+                                <rect key="frame" x="277" y="246" width="85" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVX-qc-vaF">
+                                <rect key="frame" x="215" y="246" width="54" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -439,10 +440,10 @@
                         <outlet property="levelLabel" destination="40G-hj-D7e" id="ZsP-WU-ea5"/>
                         <outlet property="myImageView" destination="pIL-kY-Yv3" id="m5r-5P-vbA"/>
                         <outlet property="progressView" destination="ks1-vX-NvG" id="GtY-Ca-0JA"/>
+                        <outlet property="statusLabel" destination="PrQ-aE-4hw" id="YFY-aK-K0E"/>
                         <outlet property="userName" destination="eMo-UK-2Jj" id="YFu-5P-L87"/>
                         <outlet property="weightProgressBar" destination="PQL-GM-K5K" id="5cy-PP-waU"/>
                         <outlet property="workoutButton" destination="FKb-7e-bZQ" id="q9t-aZ-Nsi"/>
-                        <outlet property="xpBarView" destination="JcH-me-0Sj" id="lTj-aC-5e4"/>
                         <outlet property="xpLabel" destination="rpL-eJ-tUi" id="wLl-a6-NZ5"/>
                         <segue destination="7yw-SS-zcU" kind="presentation" identifier="setup" id="abW-Ea-cId"/>
                     </connections>
@@ -861,7 +862,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZS-yL-Reh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2086.5" y="1588.5"/>
+            <point key="canvasLocation" x="2087" y="1568"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="gNo-lp-98V">
@@ -871,7 +872,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJL-Cz-tSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2534.5" y="1588.5"/>
+            <point key="canvasLocation" x="2538" y="1568"/>
         </scene>
         <!--Content View Controller-->
         <scene sceneID="8ca-Lu-dui">
@@ -1010,7 +1011,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Avatar1.jpg" width="27" height="45"/>
+        <image name="Avatar11.jpg" width="326" height="269"/>
         <image name="settings.jpeg" width="1080" height="332"/>
         <image name="weights.jpg" width="255" height="450"/>
     </resources>
