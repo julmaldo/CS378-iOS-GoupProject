@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var xpBarView: experienceBarView!
     var lastXp:Int = 2
+    var lastLevel:Int = 1
     var counter:float_t = 0
     var startingWeight:String = ""
     var users = [NSManagedObject]()
@@ -34,9 +35,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     
     @IBOutlet weak var weightProgressBar: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressView?.progress = 0.33
         self.navigationController?.navigationBarHidden = true
         self.workoutButton.layer.cornerRadius = 10.0
         let firstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
@@ -78,6 +79,10 @@ class ViewController: UIViewController {
                 {
                     level = 3
             }
+            if lastLevel != level{
+                imageList.removeAll()
+                lastLevel = level
+            }
             let imageName = "Avatar\(level)\(i).jpg"
             imageList.append(UIImage(named: imageName)!)
         }
@@ -86,9 +91,18 @@ class ViewController: UIViewController {
     }
     
     func updateWeightProgress(){
-        let start = float_t(startingWeight)
-        let current = float_t(currentWeightLabel.text!)
-        let goal = float_t(goalWeightLabel.text!)
+        var start = float_t(startingWeight)
+        var current = float_t(currentWeightLabel.text!)
+        var goal = float_t(goalWeightLabel.text!)
+        if start == nil{
+            start = 0
+        }
+        if current == nil{
+            current = 0
+        }
+        if goal == nil{
+            goal = 0
+        }
         let percent = (start! - current!)/(start! - goal!)
         weightProgressBar?.progress = percent
     }
@@ -261,7 +275,7 @@ class ViewController: UIViewController {
     
     func startAnimation(){
         myImageView.animationImages = imageList
-        myImageView.animationDuration = 1
+        myImageView.animationDuration = 2
         myImageView.startAnimating()
     }
 }
