@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var xpBarView: experienceBarView!
     var lastXp:Int = 2
+    var counter:float_t = 0
     
     var users = [NSManagedObject]()
     var bros = [NSManagedObject]()
@@ -29,9 +30,12 @@ class ViewController: UIViewController {
     var userWeightTextField: UITextField? = nil
     
     var imageList = [UIImage]()
-   
+    
+    @IBOutlet weak var progressView: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressView?.progress = 0.33
         self.navigationController?.navigationBarHidden = true
         self.workoutButton.layer.cornerRadius = 10.0
         let firstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
@@ -63,13 +67,9 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
         showUser()
-        //setLevel()
+        //updateProgress()
+        progressView.transform = CGAffineTransformMakeScale(1.0, 5.0);
         showBro()
-        //if lastXp == 0{
-        //    xpBarView.counterTotal = 1
-        //}
-        //let tmp = Int(xpLabel.text!)!
-        
         increaseXp()
     }
     
@@ -95,9 +95,22 @@ class ViewController: UIViewController {
         }
 
     }
-    
+    func updateProgress(counter:float_t,var level:Int){
+        let dom:float_t
+        if level == 1{
+            dom = 3.0
+        }else if
+            level == 2{
+                dom = 6.0
+        }else{
+                dom = 9.0
+        }
+        progressView?.progress = counter/dom
+    }
+
     func increaseXp(){
         let xp = Int(xpLabel.text!)!
+        
         var level:Int
         if xp < 3 {
             level = 1
@@ -111,16 +124,20 @@ class ViewController: UIViewController {
         var counter:Int
         if xp <= 2{
             counter = xp
+            //progressView?.progress = float_t(xp/3)
         } else if xp <= 8{
+            let x = (level - 1) * 3
         counter = xp - ((level - 1) * 3)
+        //progressView?.progress = float_t((xp - x) / x)
         }else{
             counter = xp - (level * 3)
         }
         if xp >= 18{
             counter = 9
         }
-        xpBarView.counterTotal = level
-        xpBarView.counter = counter
+        //xpBarView.counterTotal = level
+        //xpBarView.counter = counter
+        updateProgress(float_t(counter), level: level)
         levelLabel.text = String(level)
     }
     
