@@ -52,7 +52,6 @@ class SetupViewController: UIViewController {
         textField.resignFirstResponder()
         return true;
     }
-
     
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var startingWeightTF: UITextField!
@@ -94,6 +93,7 @@ class SetupViewController: UIViewController {
         }
         
     }
+    
     func saveBro(broName: String) {
         let level = "1"
         let experience = "0"
@@ -123,8 +123,6 @@ class SetupViewController: UIViewController {
         }
         
     }
-
-
     /*
     // MARK: - Navigation
 
@@ -134,5 +132,4 @@ class SetupViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

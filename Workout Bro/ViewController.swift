@@ -11,6 +11,7 @@ import CoreData
 
 class ViewController: UIViewController {
 
+    //Variables
     @IBOutlet weak var workoutButton: UIButton!
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var currentWeightLabel: UILabel!
@@ -20,35 +21,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
-    
     var lastLevel:Int = 1
-    //var counter:float_t = 0
     var startingWeight:String = ""
     
     // Arrays for Users and Bros
     var users = [NSManagedObject]()
     var bros = [NSManagedObject]()
-
+    //array for images to be animated
+    var imageList = [UIImage]()
     var alertController:UIAlertController? = nil
     var userWeightTextField: UITextField? = nil
-    
-    var imageList = [UIImage]()
-    
+    //outlets for progress bars
     @IBOutlet weak var progressView: UIProgressView!
-    
     @IBOutlet weak var weightProgressBar: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
+        //checking it is the first time the app is launching
         let firstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
-        
-        if firstLaunch  {
+        if firstLaunch {
             print("Not first launch.")
         }
         else {
             print("First launch, setting NSUserDefault.")
-            //lastXp = 0
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
             self.performSegueWithIdentifier("setup", sender: nil)
         }
@@ -57,36 +53,37 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
+        //makes progress bars bigger
+        progressView.transform = CGAffineTransformMakeScale(1.0, 5.0)
+        weightProgressBar.transform = CGAffineTransformMakeScale(1.0, 5.0)
+        //updating ui variables
         showUser()
-        //updateProgress()
-        progressView.transform = CGAffineTransformMakeScale(1.0, 5.0);
-        weightProgressBar.transform = CGAffineTransformMakeScale(1.0, 5.0);
         showBro()
         increaseXp()
         updateWeightProgress()
         
-        
-            let xp = Int(xpLabel.text!)!
-            var level:Int
-            var status:String
-            if xp < 3 {
-                level = 1
-                status = "Newbie"
-            }else
-                if xp < 9{
-                    level = 2
-                    status = "Gym Rat"
-                }else
-                {
-                    status = "Gym Master"
-                    level = 3
+        //displays the level of status
+        let xp = Int(xpLabel.text!)!
+        var level:Int
+        var status:String
+        if xp < 3 {
+            level = 1
+            status = "Newbie"
+        }else
+            if xp < 9{
+                level = 2
+                status = "Gym Rat"
+            }else{
+                status = "Gym Master"
+                level = 3
             }
-            if lastLevel != level{
-                congrats(status)
-                imageList.removeAll()
-                updateLevel(level)
-            }
-            statusLabel.text = status
+        //checks if bro has increases a level, then clears array of images to be animated
+        if lastLevel != level{
+            congrats(status)
+            imageList.removeAll()
+            updateLevel(level)
+        }
+        statusLabel.text = status
         for i in 1...2{
             let imageName = "Avatar\(level)\(i).jpg"
             imageList.append(UIImage(named: imageName)!)
@@ -95,6 +92,8 @@ class ViewController: UIViewController {
         startAnimation()
     }
     
+    //JM: displays alertcontroller to congradulate user on completing their goal and asks them to input
+    //new level
     func congrats(status:String){
         self.alertController = UIAlertController(title: "XP Gained!", message: "Congratulations! You evolved into a  \(status)!", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -106,6 +105,7 @@ class ViewController: UIViewController {
         presentViewController(self.alertController!, animated: true, completion: nil)
     }
     
+    //JM: updates the  goal weight progression progress bar
     func updateWeightProgress(){
         var start = float_t(startingWeight)
         var current = float_t(currentWeightLabel.text!)
@@ -126,6 +126,7 @@ class ViewController: UIViewController {
         weightProgressBar?.progress = percent
     }
     
+    //JM: updates the level progress for bro
     func updateProgress(counter:float_t,let level:Int){
         let dom:float_t
         if level == 1{
@@ -139,6 +140,7 @@ class ViewController: UIViewController {
         progressView?.progress = counter/dom
     }
 
+    //JM: updates the bros level in core data
     func updateLevel(level:Int) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
@@ -159,9 +161,10 @@ class ViewController: UIViewController {
         }
     }
     
+    //JM: calculates the corespoding level and progress to the next using experience points
     func increaseXp(){
         let xp = Int(xpLabel.text!)!
-        
+        //decides which level bro is
         var level:Int
         if xp < 3 {
             level = 1
@@ -187,6 +190,7 @@ class ViewController: UIViewController {
         levelLabel.text = String(level)
     }
     
+    //JM: updates the variables about bro
     func showBro(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -220,6 +224,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //JM:updates the variables for user
     func showUser() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -251,7 +256,8 @@ class ViewController: UIViewController {
             startingWeight = user.valueForKey("startWeight") as! String!
         }
     }
-    //alert to update weight, waiting for complete data model to update
+    
+    //JM: alert to update weight after user has reached goal weight
     func userUpdateGoal() {
         self.alertController = UIAlertController(title: "Update Goal Weight", message: "Fantastic! You made your goal! What would you like your new goal to be?", preferredStyle: UIAlertControllerStyle.Alert)
         

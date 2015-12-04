@@ -1,14 +1,15 @@
 import UIKit
 
-let NoOfGlasses = 3
+let maxNumOfSets = 3
 let π:CGFloat = CGFloat(M_PI)
 
+//Class to create the counter uiView
 @IBDesignable class CounterView: UIView {
     
-    @IBInspectable var counterTotal: Int = NoOfGlasses
+    @IBInspectable var counterTotal: Int = maxNumOfSets
     @IBInspectable var counter: Int = 0 {
         didSet {
-            if counter <=  NoOfGlasses {
+            if counter <=  maxNumOfSets {
                 setNeedsDisplay()
             }
         }
@@ -37,9 +38,9 @@ let π:CGFloat = CGFloat(M_PI)
 
         let angleDifference: CGFloat = 2 * π - startAngle + endAngle
         
-        let arcLengthPerGlass = angleDifference / CGFloat(NoOfGlasses)
+        let arcLengthPerSet = angleDifference / CGFloat(maxNumOfSets)
 
-        let outlineEndAngle = arcLengthPerGlass * CGFloat(counter) + startAngle
+        let outlineEndAngle = arcLengthPerSet * CGFloat(counter) + startAngle
 
         let outlinePath = UIBezierPath(arcCenter: center,
             radius: bounds.width/2 - 2.5,

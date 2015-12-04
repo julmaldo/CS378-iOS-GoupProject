@@ -13,15 +13,37 @@
                         <viewControllerLayoutGuide type="bottom" id="VoH-e2-RCP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HCw-xf-tPX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Bro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-p8-L6k">
+                                <rect key="frame" x="122" y="83" width="170" height="38"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0oV-Tp-CNf">
+                                <rect key="frame" x="0.0" y="161" width="414" height="248"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.9789520035" green="1" blue="0.84817851860000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar32" translatesAutoresizingMaskIntoConstraints="NO" id="jF1-JK-7GE">
+                                <rect key="frame" x="61" y="161" width="293" height="248"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.68627450980000004" green="0.26274509800000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjr-vv-1G1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="501" y="46"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Avatar32" width="326" height="269"/>
+    </resources>
 </document>

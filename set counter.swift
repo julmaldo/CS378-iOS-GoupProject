@@ -8,10 +8,10 @@
 
 import UIKit
 
+//Class for set counter for each excercise 
 class set_counter: UIViewController {
     
     //Counter outlets
-
     @IBOutlet weak var counterTotalLabel: UILabel!
     @IBOutlet weak var counterView: CounterView!
     @IBOutlet weak var counterLabel: UILabel!

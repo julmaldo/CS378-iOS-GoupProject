@@ -11,7 +11,6 @@ import UIKit
 class WorkoutTableViewController: UITableViewController {
 
     var data:DataModel = DataModel()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
@@ -43,13 +42,6 @@ class WorkoutTableViewController: UITableViewController {
         cell?.backgroundColor = UIColor(red:0.68, green:0.26, blue:0.09, alpha:1.0)
     }
     
-//  weird blackout option
-//    override func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
-//        var cell = tableView.cellForRowAtIndexPath(indexPath)
-//        cell?.contentView.backgroundColor = UIColor.blackColor()
-//        cell?.backgroundColor = UIColor.blackColor()
-//    }
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("workout", forIndexPath: indexPath)
         
@@ -62,7 +54,6 @@ class WorkoutTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
